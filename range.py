@@ -2,15 +2,17 @@ import random
 import time
 
 
-def generate_random_list(length: int):
-    """ Generates a list of random numbers and prints the process duration in seconds """
+def generate_random_list(length: int) -> list[int]:
+    """ Generates and returns a list of random numbers and prints the process duration in seconds """
     start: float = time.time()
     array = [random.randint(0, 100) for i in range(length)]
     end: float = time.time()
     print("Temps écoulé :", end - start)
+    return array
 
-for i in range(10):
-    generate_random_list(i * 10 ** 6)
+
+# for i in range(10):
+#     generate_random_list(i * 10 ** 6)
 
 # Result:
 # Temps écoulé : 0.0
