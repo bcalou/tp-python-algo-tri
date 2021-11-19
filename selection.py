@@ -12,9 +12,7 @@ def sort(array: list[int]) -> list[int]:
                 lowest_number_index = i
 
         # Replace value by lowest
-        temp: int = array[start]
-        array[start] = array[lowest_number_index]
-        array[lowest_number_index] = temp
+        array[start], array[lowest_number_index] = array[lowest_number_index], array[start]
 
     return array
 

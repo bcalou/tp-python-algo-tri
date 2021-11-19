@@ -4,14 +4,11 @@ def sort(array: list[int]) -> list[int]:
     """
     for start in range(len(array)):
         current_number: int = array[start]
-        for i in range(start-1, -1, -1):
-            # Move number until it's placed well
-            if current_number < array[i]:
-                temp: int = array[i]
-                array[i] = current_number
-                array[i+1] = temp
-            else:
-                break
+        i = start-1
+        while i > -1 and current_number < array[i]:
+            array[i+1] = array[i]
+            i -= 1
+        array[i+1] = current_number
     return array
 
 if __name__ == "__main__":
