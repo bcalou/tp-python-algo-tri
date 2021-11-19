@@ -23,7 +23,7 @@ def sort(table : list) :
 #Function that merge the given splited list, while sorting themm into a new sorted list.
 def merge(left_table, right_table) :
     result = []
-    index_left, index_right = 0, 0
+    index_left = index_right = 0
     #Comparing the first numbers of each list to keep the lowest one
     while index_left < len(left_table) and index_right < len(right_table) :
         if left_table[index_left] <= right_table[index_right] :
@@ -35,12 +35,11 @@ def merge(left_table, right_table) :
             result.append(right_table[index_right])
             index_right += 1
     #Adding the rest of the numbers
-    if left_table :
-        result.extend(left_table[index_left :])
-    if right_table :
-        result.extend(right_table[index_right :])
+    result.extend(left_table[index_left :])
+    result.extend(right_table[index_right :])
     return result
 
 sort(array)
 end: float = time.time()
 print("Temps écoulé :", end - start)
+
