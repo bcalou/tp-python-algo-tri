@@ -75,7 +75,7 @@ Observez bien les différentes courbes du graphique ci-dessous. Quelle est la pl
 
 Créez un fichier `selection.py`.
 
-Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
+Observez attentivement l'animation de tri par sélection ci-dessous pour en comprendre le fonctionnement.
 
 <img src="selection.gif">
 
