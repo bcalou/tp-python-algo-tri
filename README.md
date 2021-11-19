@@ -48,10 +48,14 @@ Créez un fichier `range.py`.
 Mesurez combien de temps prend python à générer un tableau composés de nombres allant de 0 à 100 et contenant :
 
 - 1 000 000 entrées
+  > 0.67s
 - 2 000 000 entrées
+  > 1.45s
 - 3 000 000 entrées
+  > 2.66s
 - ...
 - 10 000 000 entrées
+  > 6.07s
 
 **Astuce** : vous pouvez écrire les nombres avec des underscores pour mieux les lire : `1_000_000`
 
@@ -59,9 +63,14 @@ Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécu
 
 Comment vous semble évoluer la courbe ?
 
+> la courbe semble évolué de façon linéaire
+> <img src="ressources/range_courbe.png" width="400">
+
 Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ?
 
-<img src="o.webp" width="400">
+<img src="ressources/o.webp" width="400">
+
+> La courbe O(n) semble le plus correspondre à notre situation.
 
 #### Quelques exemples de complexités courante :
 
@@ -77,9 +86,11 @@ Créez un fichier `selection.py`.
 
 Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
 
-<img src="selection.gif">
+<img src="ressources/selection.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+
+> L'algorithme parcours la liste à partir du premier index des éléments non-trié jusqu'à la fin puis l'inverse avec le plus petit élément parcouru.
 
 Puis implémentez l'algorithme en python. Vérifiez son bon fonctionnement avec différentes entreés.
 
@@ -92,7 +103,11 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+> <img src="ressources/selection_courbe.png" width="400">
+
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+
+> La complexité semble être en O(n^2), cela est logique car on parcours des éléments par éléments
 
 ### 2s. Tri par insertion
 
@@ -100,9 +115,11 @@ Créez un fichier `insertion.py`.
 
 Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
 
-<img src="insertion.gif">
+<img src="ressources/insertion.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+
+> On parcours la liste depuis le dernier plus petit élément parcouru et on vérifie s'il en existe un plus petit. Si oui, on l'insère avant l'élément et tous les précédents jusqu'à ce qu'il en soit plus grand.
 
 Puis implémentez l'algorithme en python. Vérifiez son bon fonctionnement avec différentes entreés.
 
@@ -115,7 +132,11 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+> <img src="ressources/selection_courbe.png" width="400">
+
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+
+> La complexité semble être en O(n^2), cela est logique car on parcours des éléments par éléments
 
 ### 3. Tri par fusion
 
@@ -156,7 +177,7 @@ Indice : la factorielle de 5 est donc égale à 5 multipliée par la factorielle
 
 Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
-<img src="fusion.png">
+<img src="ressources/fusion.png">
 
 Cet algorithme est de type "diviser pour régner".
 
@@ -191,15 +212,23 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+> <img src="ressources/fusion_courbe.png">
+
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
 
+> La complexité semble être en O(n^2), cela est logique car on parcours des éléments par éléments
+
 Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ?
+
+> Pour de grandes tailles de tableaux, le tri par fusion est bien plus rapide que l'insertion et la sélection
 
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+
+> <img src="ressources/sort_courbe.png">
 
 ## Pour rendre ce TP
 
@@ -208,3 +237,9 @@ Merci de faire une Pull Request vers ce repository.
 Le nom de la PR doit contenir votre nom et celui de votre collègue si vous êtes en binôme.
 
 Vérifiez que votre code est conforme aux normes pep8 et aux autres critères de qualité dont nous avons parlé.
+
+## Note
+
+J'ai fais les tests de performance dans le fichier benchmark.py dans les scripts
+J'ai utilisé la librairie matplotlib installable avec la commande suvante:
+`pip install matplotlib`
