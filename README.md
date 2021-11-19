@@ -94,7 +94,7 @@ Tracez le graphique correspondant.
 
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
 
-### 2s. Tri par insertion
+### 2. Tri par insertion
 
 Créez un fichier `insertion.py`.
 
