@@ -1,21 +1,21 @@
 import random
 import time
-import matplotlib.pyplot as plt
+
+from plot import plot_graph
 
 entries = []
 time_per_entry = []
 
-for i in range(1, 24):
-    number_of_entries = 2 ** i
+# Get execution time for generating a tab with a number of entries
+# The number goes from 2 to 16 777 216
+# Complexity seems to be o(n)
+for i in range(1, 25):
+    number_of_entries = pow(2, i)
     start: float = time.time()
-    [random.randint(0, 100) for i in range(number_of_entries)]
+    [random.randint(0, 10000) for i in range(number_of_entries)]
     end: float = time.time()
     time_elpased = end - start
     entries.append(number_of_entries)
     time_per_entry.append(time_elpased)
 
-plt.plot(entries, time_per_entry, 'ro')
-plt.xlabel("Nombre d'entrées")
-plt.ylabel("Temps d'exécution (en s)")
-plt.axis([1, 2**24, 0, 6])
-plt.savefig("graph.png")
+plot_graph(entries, time_per_entry, "range.png")
