@@ -1,8 +1,8 @@
 import random as rd
 
-from Exercices.range import *
-from Exercices.selection import basic_list_sort
-from Exercices.insertion import insertion_sort
+from exercices.range import *
+from exercices.selection import basic_list_sort
+from exercices.insertion import insertion_sort
 
 
 
@@ -17,11 +17,11 @@ datas = [
     "tested_function" : basic_list_sort,
     'tested_data' : lambda size : [rd.randint(0,10000) for i in range(size)]
     },
-    {'tested_size' : 3,
+    {'tested_size' : 100,
     "tested_function" : insertion_sort,
-    'tested_data' : lambda size : [rd.randint(0,100) for i in range(size)]
+    'tested_data' : lambda size : [rd.randint(0,1000) for i in range(size)]
     }
-    ]
+]
 
 class TestedFile():
     RANDINT = 0
