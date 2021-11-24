@@ -59,6 +59,12 @@ Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécu
 
 Comment vous semble évoluer la courbe ?
 
+<img src="range_graph.png" width="400">
+
+'''
+La courbe semble être de la forme O(n)
+'''
+
 Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ?
 
 <img src="o.webp" width="400">
@@ -77,6 +83,14 @@ Créez un fichier `selection.py`.
 
 Observez attentivement l'animation de tri par sélection ci-dessous pour en comprendre le fonctionnement.
 
+'''
+Donc on part du premier terme du tableau
+on regarde le prochain, si il est plus petit que le premier on le garde en mémoire
+on compare ensuite le terme en mémoire aux autres et dès que on trouve plus petit terme, on échange sa position avec le premier terme
+on effectue la même procédure aux autres termes en commançant au par le terme suivant pas classé.
+on obtient au final notre tableau classé
+'''
+
 <img src="selection.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
@@ -92,7 +106,13 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+<img src="Selection_graph.png" width="400">
+
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+
+'''
+La difficulté semble etre exp(n)
+'''
 
 ### 2s. Tri par insertion
 
@@ -114,6 +134,8 @@ Mesurez le temps d'éxécution pour un tableau de :
 - 10000 entrées
 
 Tracez le graphique correspondant.
+
+<img src="Insertion_graph.png" width="400">
 
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
 
