@@ -61,9 +61,9 @@ Comment vous semble évoluer la courbe ?
 
 <img src="range_graph.png" width="400">
 
-'''
+```
 La courbe semble être de la forme O(n)
-'''
+```
 
 Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ?
 
@@ -83,13 +83,13 @@ Créez un fichier `selection.py`.
 
 Observez attentivement l'animation de tri par sélection ci-dessous pour en comprendre le fonctionnement.
 
-'''
+```
 Donc on part du premier terme du tableau
 on regarde le prochain, si il est plus petit que le premier on le garde en mémoire
 on compare ensuite le terme en mémoire aux autres et dès que on trouve plus petit terme, on échange sa position avec le premier terme
 on effectue la même procédure aux autres termes en commançant au par le terme suivant pas classé.
 on obtient au final notre tableau classé
-'''
+```
 
 <img src="selection.gif">
 
