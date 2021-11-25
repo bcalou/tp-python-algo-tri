@@ -1,10 +1,11 @@
 import random
 import time
 
-def get_time_algo(n : str):
+
+def get_time_algo(n: str):
     a = int(n)
     start: float = time.time()
-    array : list = [random.randint(0, 100) for _ in range(a)]
+    array: list = [random.randint(0, 100) for _ in range(a)]
     end: float = time.time()
     print("Temps écoulé pour {} entree:".format(n), end - start)
 

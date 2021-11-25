@@ -2,7 +2,7 @@ import random
 import time
 
 
-def insert_sort(seq):
+def insert_sort(seq: list[int]) -> list[int]:
     # sort the sequence by insertion
     n = len(seq)
     # from the first element to the end

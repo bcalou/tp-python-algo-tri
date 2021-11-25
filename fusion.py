@@ -1,17 +1,19 @@
 import time
 import random
 
-def sort_fusion(seq):
+
+def sort_fusion(seq: list[int]) -> list[int]:
     # we divide the sequence into two equal parts
     # we traite each part
     if len(seq) <= 1:
         return seq
-    mid = int(len(seq) / 2) 
+    mid = int(len(seq)/2) 
     seq_left = sort_fusion(seq[:mid])
     seq_right = sort_fusion(seq[mid:])
     return merge(seq_left, seq_right)
 
-def merge(seq_left, seq_right):
+
+def merge(seq_left: list[int], seq_right: list[int]) -> list[int]:
     result = []
     i = 0  
     j = 0
@@ -27,20 +29,19 @@ def merge(seq_left, seq_right):
     result += seq_right[j:]
     return result
 
-def get_time_algo(n : str):
+
+def get_time_algo(n: str):
     a = int(n)
-    array : list = [random.randint(0, 100) for _ in range(a)]
+    array: list = [random.randint(0, 100) for _ in range(a)]
     start: float = time.time()
     sort_fusion(array)
     end: float = time.time()
     print("Temps écoulé pour {} entree:".format(n), end - start)
 
-seq = [5,3,0,6,1,4]
+
+seq = [5, 3, 0, 6, 1, 4]
 result = sort_fusion(seq)
 print (result)
-
-
-
 
 get_time_algo("1_000")
 get_time_algo("2_000")

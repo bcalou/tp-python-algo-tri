@@ -2,7 +2,7 @@ import random
 import time
 
 
-def selection_sort(seq):
+def selection_sort(seq: list[int]) -> list[int]:
     # sort the sequence by selection
     n = len(seq)
     for i in range(n-1):

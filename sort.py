@@ -2,9 +2,9 @@ import time
 import random
 
 
-def get_time_algo(n : str):
+def get_time_algo(n: str):
     a = int(n)
-    array : list = [random.randint(0, 100) for _ in range(a)]
+    array: list = [random.randint(0, 100) for _ in range(a)]
     start: float = time.time()
     list.sort(array)
     end: float = time.time()
