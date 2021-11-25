@@ -21,7 +21,8 @@ def merge(tab1: list[int], tab2: list[int]) -> list[int]:
             tabFinal.append(tab2[0])
             tab2.pop(0)
 
-    #tabFinal.append(tab1[0]) if len(tab1) == 1 else tabFinal.append(tab2[0]) 
+    tabFinal.append(tab1[0]) if len(tab1) > 0 else tabFinal.append(tab2[0])
+
     return tabFinal
 
 
@@ -38,26 +39,26 @@ sort(tableau)
 end: float = time.time()
 print("Temps écoulé pour 1 000 entrées:", end - start)
 
-# tableau: list[int] = [random.randint(0, 100) for _ in range(5000)]
-# start: float = time.time()
-# sort(tableau)
-# end: float = time.time()
-# print("Temps écoulé pour 5 000 entrées:", end - start)
+tableau: list[int] = [random.randint(0, 100) for _ in range(5000)]
+start: float = time.time()
+sort(tableau)
+end: float = time.time()
+print("Temps écoulé pour 5 000 entrées:", end - start)
 
-# tableau: list[int] = [random.randint(0, 100) for _ in range(10_000)]
-# start: float = time.time()
-# sort(tableau)
-# end: float = time.time()
-# print("Temps écoulé pour 10 000 entrées:", end - start)
+tableau: list[int] = [random.randint(0, 100) for _ in range(10_000)]
+start: float = time.time()
+sort(tableau)
+end: float = time.time()
+print("Temps écoulé pour 10 000 entrées:", end - start)
 
-# tableau: list[int] = [random.randint(0, 100) for _ in range(20_000)]
-# start: float = time.time()
-# sort(tableau)
-# end: float = time.time()
-# print("Temps écoulé pour 20 000 entrées:", end - start)
+tableau: list[int] = [random.randint(0, 100) for _ in range(20_000)]
+start: float = time.time()
+sort(tableau)
+end: float = time.time()
+print("Temps écoulé pour 20 000 entrées:", end - start)
 
-# tableau: list[int] = [random.randint(0, 100) for _ in range(50_000)]
-# start: float = time.time()
-# sort(tableau)
-# end: float = time.time()
-# print("Temps écoulé pour 50 000 entrées:", end - start)
+tableau: list[int] = [random.randint(0, 100) for _ in range(50_000)]
+start: float = time.time()
+sort(tableau)
+end: float = time.time()
+print("Temps écoulé pour 50 000 entrées:", end - start)
