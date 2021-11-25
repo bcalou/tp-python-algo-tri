@@ -104,6 +104,9 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
 
+On prend le premier nombre. On prend le deuxième nombre et si il est plus petit on l'insère avant le premier.
+Ensuite on prend le troisième on le compare et on le met devant le premier plus petit nombre sur lequel on tombe et si y'en a pas on le met au début.
+
 Puis implémentez l'algorithme en python. Vérifiez son bon fonctionnement avec différentes entreés.
 
 Mesurez le temps d'éxécution pour un tableau de :

@@ -17,3 +17,16 @@ for i in range(len(array)):
 end: float = time.time()
 
 print("Temps écoulé :", end - start)
+
+####### correction
+
+def selection_sort(array: list[int]) -> list[int]:
+    for i, value in enumerate(array):
+        permut_index = i
+        for j in range(i+1, len(array)):
+            if value > array[j]:
+                value = array[j]
+                permut_index = j
+        array[i], array[permut_index] = array[permut_index], array[i]
+
+    return array
