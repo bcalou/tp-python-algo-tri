@@ -110,9 +110,9 @@ Tracez le graphique correspondant.
 
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
 
-'''
+```
 La difficulté semble etre exp(n)
-'''
+```
 
 ### 2s. Tri par insertion
 
@@ -123,6 +123,12 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 <img src="insertion.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+
+```
+on part du terme n+1 on regarde si il est plus petit que les terme précédent
+si il l'est on echange de place et on ddécale les autres.
+on regarde ensuite pour les autres nombres de la liste et on fait la même procédure 
+```
 
 Puis implémentez l'algorithme en python. Vérifiez son bon fonctionnement avec différentes entreés.
 
@@ -138,6 +144,10 @@ Tracez le graphique correspondant.
 <img src="Insertion_graph.png" width="400">
 
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+
+```
+la difficulté semble être de l'odre exp(n)
+```
 
 ### 3. Tri par fusion
 
@@ -213,7 +223,13 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+<img src="Fusion_graph.png">
+
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+
+```
+La difficulyé semble être de l'orde de O nLog(n)
+```
 
 Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ?
 
@@ -222,6 +238,8 @@ Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fus
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+
+<img src="PySort_graph.png">
 
 ## Pour rendre ce TP
 
