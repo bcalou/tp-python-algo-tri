@@ -12,6 +12,7 @@ def factorielle(number: int) -> int:
         result = number * factorielle(number-1)
     return result
 
+# Correction.
 def factorial(number: int) -> int:
     return 1 if number == 1 else number * factorial(number-1)
 
