@@ -1,18 +1,18 @@
 import random
 import time
 
-def insertion_sort(array: list[int]) -> list[int]:
+def insertion_sort(tab: list[int]) -> list[int]:
 
-    for start in range(len(array)):
-        current_number: int = array[start]
+    for start in range(len(tab)):
+        current: int = tab[start]
         for i in range(start-1, -1, -1):
-            if current_number < array[i]:
-                temp: int = array[i]
-                array[i] = current_number
-                array[i+1] = temp
+            if current < tab[i]:
+                temp: int = tab[i]
+                tab[i] = current
+                tab[i+1] = temp
             else:
                 break
-    return array
+    return tab
 
 tableau: list[int] = [random.randint(0, 100) for _ in range(1000)]
 start: float = time.time()
