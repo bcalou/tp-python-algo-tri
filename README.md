@@ -47,11 +47,11 @@ Créez un fichier `range.py`.
 
 Mesurez combien de temps prend python à générer un tableau composés de nombres allant de 0 à 100 et contenant :
 
-- 1 000 000 entrées
-- 2 000 000 entrées
-- 3 000 000 entrées
+- 1 000 000 entrées  --> 4.426846981048584
+- 2 000 000 entrées  --> 9.597198247909546
+- 3 000 000 entrées  --> 14.753462314605713
 - ...
-- 10 000 000 entrées
+- 10 000 000 entrées  --> 63.765732765197754
 
 **Astuce** : vous pouvez écrire les nombres avec des underscores pour mieux les lire : `1_000_000`
 
@@ -85,10 +85,10 @@ Puis implémentez l'algorithme en python. Vérifiez son bon fonctionnement avec 
 
 Mesurez le temps d'éxécution pour un tableau de :
 
-- 1000 entrées
-- 2000 entrées
+- 1000 entrées --> 0.23699355125427246
+- 2000 entrées --> 0.5366291999816895
 - ...
-- 10000 entrées
+- 10000 entrées --> 4.197113275527954
 
 Tracez le graphique correspondant.
 
