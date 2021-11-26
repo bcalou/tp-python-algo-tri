@@ -1,5 +1,6 @@
 import time
 start: float = time.time()
+import random
 
 def tri_insertion(t): 
     # Parcourt de 1 à la taille du tableau t
@@ -11,7 +12,7 @@ def tri_insertion(t):
                 j -= 1
         t[j + 1] = k
 # Pour tester le code ci-dessus
-t = [98, 22, 15, 32, 2, 74, 63, 70]
+t = [random.randint(0, 100) for i in range(int('10_000'))]
 tri_insertion(t) 
 print ("Le tableau trié est :")
 for i in range(len(t)): 

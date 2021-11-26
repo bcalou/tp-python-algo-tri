@@ -9,7 +9,7 @@ def tri_selection(tri):
        min = i
        for j in range(i+1, len(tri)):
            if tri[min] > tri[j]:
-               min = j
+               min = j 
                 
        tmp = tri[i]
        tri[i] = tri[min]
@@ -17,7 +17,7 @@ def tri_selection(tri):
    return tri
 
 # Test code
-tri = [random.randint(0, 100) for i in range(int('10_000'))]
+tri = [random.randint(0, 100) for i in range(int('9_000'))]
 tri_selection(tri)
 print ("Le tableau trié est:")
 for i in range(len(tri)):

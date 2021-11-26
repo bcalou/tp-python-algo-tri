@@ -48,18 +48,20 @@ Créez un fichier `range.py`.
 Mesurez combien de temps prend python à générer un tableau composés de nombres allant de 0 à 100 et contenant :
 
 - 1 000 000 entrées  --> 4.426846981048584
-- 2 000 000 entrées  --> 9.597198247909546
+- 2 000 000 entrées  --> 9.59719824790954
 - 3 000 000 entrées  --> 14.753462314605713
 - ...
-- 10 000 000 entrées  --> 63.765732765197754
+- 10 000 000 entrées  --> 63.765732765197754 
+Voir Photos
 
 **Astuce** : vous pouvez écrire les nombres avec des underscores pour mieux les lire : `1_000_000`
 
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
-Comment vous semble évoluer la courbe ?
+Comment vous semble évoluer la courbe ? --> de façon croissante et linéaire.
 
 Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ?
+--> 0(N logN)
 
 <img src="o.webp" width="400">
 
@@ -92,7 +94,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? --> O(N log N) ou O(N²)
 
 ### 2. Tri par insertion
 
@@ -115,7 +117,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? --> O(N)
 
 ### 3. Tri par fusion
 
@@ -191,7 +193,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? --> la complexité semble être 0(N logN) qui est logique par rapport au code implémenté.
 
 Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ?
 
@@ -199,7 +201,7 @@ Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fus
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
-Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;) --> python fait beaucoup mieux avec la fonction sort() en temps d'execution comme on peut voir sur la photo GraphSort.
 
 ## Pour rendre ce TP
 

@@ -1,21 +1,22 @@
 import time
 start: float = time.time()
+import random
 
 #Tri fusion function of division of tab
-def tri_fusion(tab):
+def sort(tab):
     if  len(tab) <= 1: 
         return tab
     pivot = len(tab)//2
     tab1 = tab[:pivot]
     tab2 = tab[pivot:]
-    gauche = tri_fusion(tab1)
-    droite = tri_fusion(tab2)
-    flr = fusion(gauche,droite)
+    gauche = sort(tab1)
+    droite = sort(tab2)
+    flr = merge(gauche,droite)
     return flr
 
 
 #Tri fusion function of fusion of 2 lists
-def fusion(tab1,tab2):
+def merge(tab1,tab2):
     i_tab1 = 0
     i_tab2 = 0    
     size_tab1 = len(tab1)
@@ -36,9 +37,9 @@ def fusion(tab1,tab2):
         i_tab2+=1
     return tab_flr
 
-tab = [11, 222, 3, 899, 24, 5, 46, 67]
+tab = [random.randint(0, 100) for i in range(int('10_000'))]
 print(tab)
-tab_trie = tri_fusion(tab)
+tab_trie = sort(tab)
 print(tab_trie)
 
 end: float = time.time()
