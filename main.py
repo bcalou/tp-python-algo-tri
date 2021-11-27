@@ -35,14 +35,20 @@ class TestedFile():
 
 _file = TestedFile.FUSION_SORT
 
-print("\nQuantitée;Temps exécution(s)")
+print("\nQuantitée", end="\t   : ")
 # fait 10 tests en augmentant la taille d'échantillon par tested_size
-for batch_size in range(datas[_file]['tested_size'], datas[_file]['tested_size'] * 11, datas[_file]['tested_size']) :
+header = range(datas[_file]['tested_size'], datas[_file]['tested_size'] * 11, datas[_file]['tested_size'])
+
+for h in header:
+    print(h, end="\t")
+print("\nTemps exécution(s)", end=" : ")
+
+for batch_size in header :
     
     # fait une moyenne sur 10 lancement de la fonction et retournele temps d'éxécution moyen
     exe_time : float = get_avg_exe_time_for(datas[_file]['tested_function'],
                                             datas[_file]['tested_data'],
                                             batch_size)
     
-    # petit print a coller dans un excel
-    print(batch_size, ";" + str(exe_time).replace('.', ','))
+    print("{}".format(str(exe_time).replace('.', ',')), end="\t")
+print()

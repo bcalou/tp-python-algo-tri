@@ -11,21 +11,11 @@ def get_avg_exe_time_for(func, arg_func,batch_size=10, avg_size = 10) -> float:
         func(arg_func(batch_size))
         end : float = time.time()
         avg += end - start
-    avg = round(avg / 10, 3)
+    avg = round(avg / 10, 4)
     return avg
 
 
 def generate_randint_list(size : int) -> list[int]:
     list : List[int] = [rd.randint(0,100) for i in range(size)]
     return list
-
-
-if __name__ == "__main__":
-    print("Quantitée;Temps exécution(s)")
-    for size in range(1_000_000, 10_000_001, 1_000_000):
-        avg: float = 0
-        for i in range(10):
-            avg += get_avg_exe_time_for(generate_randint_list, size)
-        avg = round(avg / 10, 3)
-        print(size, ";" + str(avg).replace('.', ','))
         

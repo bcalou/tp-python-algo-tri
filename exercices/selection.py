@@ -9,14 +9,13 @@ Le tri par selection dans un tableau consiste en :
 """
 
 def basic_list_sort(unsortedList : List[int]) -> List[int]:
+    if len(unsortedList) == 0:
+        return unsortedList
     sortedList = unsortedList.copy()
 
-    if len(sortedList) == 0:
-        return sortedList
-    sorted = False
     i : int = 0
     partial_i : int = 0
-    while not sorted:
+    for i in range(len(sortedList)):
 
         mini = sortedList[i]
         mini_i = 0
@@ -28,9 +27,6 @@ def basic_list_sort(unsortedList : List[int]) -> List[int]:
 
         sortedList[i+mini_i] = sortedList[i]
         sortedList[i] = mini
-        i += 1
-        if i == len(sortedList):
-            sorted = True
 
     #print("{} -> {}".format(unsortedList, sortedList))
     return sortedList
