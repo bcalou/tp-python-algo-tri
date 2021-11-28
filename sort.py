@@ -1,6 +1,7 @@
 import random
 import time
 
+#Try the python sort method
 for i in range(1,11):
     start: float = time.time()
     tab = [random.randint(0, 100) for i in range(1_000*i)]

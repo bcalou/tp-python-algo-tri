@@ -127,7 +127,7 @@ Tracez le graphique correspondant.
 
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
 
-- La compléxité semble être de O(N²). Cela paraît logique, mais elle pourrait peut-être être aussi égale à O(2^n) car il y a une boucle while dans une boucle for dans une boucle for
+- La compléxité semble être de O(N²). Cela paraît logique.
 
 ### 3. Tri par fusion
 
