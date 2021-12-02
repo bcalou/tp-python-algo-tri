@@ -1,9 +1,11 @@
 import random
 import time
 
-array = [random.randint(0, 100) for i in range(10_000)]
+array = [random.randint(0, 100) for i in range(100)]
 
+array2 = [0,1,2,6,1,0,15,12,3,8,9]
 
+array3 = [77,75,72,70,60,52,41,3,2,21,21,10]
 
 def selection_sort(array: list[int]) -> list[int]:
     #on parcourt tous les éléments du tableau en gardant la valeur 
@@ -28,8 +30,5 @@ selection_sort(array)
 
 end: float = time.time()
 
+print(selection_sort(array3))
 print("Temps écoulé :", end - start)
-
-####### correction
-
-

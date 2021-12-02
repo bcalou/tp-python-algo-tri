@@ -1,7 +1,11 @@
 import random
 import time
 
-final_test = [random.randint(0, 100) for i in range(1)]
+final_test = [random.randint(0, 100) for i in range(100)]
+
+array2 = [0,1,2,6,1,0,15,12,3,8,9]
+
+array3 = [77,75,72,70,60,52,41,3,2,21,21,10]
 
 #fonction permmettant du fusionner 2 tableaux triés
 #en un seul tableau triés
