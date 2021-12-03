@@ -77,7 +77,7 @@ Observez bien les différentes courbes du graphique ci-dessous. Quelle est la pl
 
 Créez un fichier `selection.py`.
 
-Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
+Observez attentivement l'animation de tri par sélection ci-dessous pour en comprendre le fonctionnement.
 
 <img src="selection.gif">
 
@@ -98,7 +98,7 @@ Tracez le graphique correspondant.
 Quel semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
 # Cela correspond a une compléxité O(N²)
 
-### 2s. Tri par insertion
+### 2. Tri par insertion
 
 Créez un fichier `insertion.py`.
 
