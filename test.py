@@ -35,18 +35,24 @@ tests: list[dict] = [
 
 def test_sort_function(sort_function: Callable, label: str):
     error = False
+    test = {}
+    result = []
 
     for test in tests:
         result = sort_function(test["input"])
 
         if len(result) != len(test["input"]):
             error = True
-            break
 
-        for index, number in enumerate(result):
-            if number != test["input"][index]:
-                error = True
-                break
+        else:
+            for index, number in enumerate(result):
+                if number != test["input"][index]:
+                    error = True
+                    break
+
+        if error:
+            print(f"{label}: {test['input']} devient {result}, tri incorrect")
+            break
 
     print(label, '\033[91m❌KO\033[00m' if error else '\033[92m✓ OK\033[00m')
 
