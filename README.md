@@ -12,7 +12,7 @@ Nous aborderons par ce TP la notion de complexité algorithmique, c'est à dire 
 
 Nous travaillerons sur un tableau de nombres, par exemple :
 
-```
+```py
 array: list[int] = [2, 34, -4, 2, 8, 1]
 ```
 
