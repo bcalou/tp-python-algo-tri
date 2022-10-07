@@ -4,4 +4,26 @@ Selection sort
 
 
 def sort(array: list[int]) -> list[int]:
-    return []
+    """Sort the array with selection sort"""
+    # For each item of the input array
+    for index in range(len(array)):
+
+        # For now, assume that the current element is the smallest
+        index_of_smallest: int = index
+
+        # For each element between the current element and the end of the array
+        # (that is the unsorted part of the array)
+        for unsorted_index in range(index, len(array)):
+
+            # If the element is smaller than the smallest so far,
+            # it becomes the new smallest
+            if array[unsorted_index] < array[index_of_smallest]:
+                index_of_smallest = unsorted_index
+
+        # Exchange the position of the current element and the smallest element
+        # found in the rest of the array
+        array[index], array[index_of_smallest] = (
+          array[index_of_smallest], array[index]
+        )
+
+    return array
