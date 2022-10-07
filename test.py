@@ -16,7 +16,7 @@ tests: list[dict] = [
   },
   {
     "input": [-4, -282, 0, 7, 0],
-    "expected": [-283, -4, 0, 0, 7]
+    "expected": [-282, -4, 0, 0, 7]
   },
   {
     "input": [1, 1, 1, 1, 1],
@@ -39,14 +39,15 @@ def test_sort_function(sort_function: Callable, label: str):
     result = []
 
     for test in tests:
-        result = sort_function(test["input"])
+        result = sort_function(test["input"].copy())
+        print(result)
 
-        if len(result) != len(test["input"]):
+        if len(result) != len(test["expected"]):
             error = True
 
         else:
             for index, number in enumerate(result):
-                if number != test["input"][index]:
+                if number != test["expected"][index]:
                     error = True
                     break
 
