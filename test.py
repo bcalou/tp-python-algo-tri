@@ -71,7 +71,7 @@ def test_factorial():
     )
 
 
-test_sort_function(insertion_sort, "Test par insertion")
 test_sort_function(selection_sort, "Test par sélection")
+test_sort_function(insertion_sort, "Test par insertion")
 test_factorial()
-test_sort_function(selection_sort, "Test par fusion")
+test_sort_function(fusion_sort, "Test par fusion")
