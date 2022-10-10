@@ -2,14 +2,17 @@
 Insertion sort
 """
 
-import random
+import time as t
+import rd_list_generator as rg
 
 def main():
     """Main function
     """
-    array = [random.randint(0, 100) for _ in range(10)]
-    print(array)
-    print(sort(array))
+    array = rg.generate_array_of_number(200000)
+
+    start: float = t.time()
+    sort(array)
+    print("Sorted :", t.time()-start, "s")
 
 def sort(array: list[int]) -> list[int]:
     """Sorts an array using the insertion sort algorithm
