@@ -13,13 +13,11 @@ def sort(array: list[int]) -> list[int]:
 
     for current_index_to_work_on in range(0, len(array) - 1):
         index_of_lowest_value: int = current_index_to_work_on
-        lowest_value: int = array[index_of_lowest_value]
-        
+
         # Only checking values in left part of array that hasn't been sorted yet
         for index in range(current_index_to_work_on, len(array)):
 
-            if array[index] < lowest_value:
-                lowest_value = array[index]
+            if array[index] < array[index_of_lowest_value]:
                 index_of_lowest_value = index
 
         # Switching the value located in the current index to work on with the
