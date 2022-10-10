@@ -59,7 +59,7 @@ Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécu
 
 Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? *Écrivez votre réponse ici*
 
-<img src="o.webp" width="400">
+<img src="img/o.webp" width="400">
 
 #### Quelques exemples de complexités courante :
 
@@ -73,7 +73,7 @@ Comment vous semble évoluer la courbe ? Observez bien les différentes courbes 
 
 Observez attentivement l'animation de tri par sélection ci-dessous pour en comprendre le fonctionnement.
 
-<img src="selection.gif">
+<img src="img/selection.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
 
@@ -94,7 +94,7 @@ Quelle semble être la complexité de notre fonction de tri ? Cela est-il logiqu
 
 Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
 
-<img src="insertion.gif">
+<img src="img/insertion.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
 
@@ -150,7 +150,7 @@ Vérifiez son bon fonctionnement en éxécutant le fichier `test.py`.
 
 Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
-<img src="fusion.png">
+<img src="img/fusion.png">
 
 Cet algorithme est de type "diviser pour régner".
 
