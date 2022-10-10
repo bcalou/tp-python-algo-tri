@@ -57,7 +57,7 @@ Mesurez combien de temps prend python à générer un tableau composés de :
 
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
-Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? *Écrivez votre réponse ici*
+Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? *O(N)*
 
 <img src="img/o.webp" width="400">
 
@@ -75,7 +75,15 @@ Observez attentivement l'animation de tri par sélection ci-dessous pour en comp
 
 <img src="img/selection.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? 
+*
+Dans le cas d'un tableau trié par ordre croissant, on parcours chaque élément du
+tableau pour récupérer l'élément le plus petit que l'on va ensuite échanger avec le 1er élément du tableau. Pour cela, lorsque l'on arrive
+sur le premier élément, on le stock dans la mémoire, lorsque l'on arrive au 2e 
+élément, on regarde si cet élément est inférieur à l'élément stocké en mémoire (1er élément),
+si c'est le cas, on écrase l'élément stocké dans la mémoire par un cet élément (2e élément)
+Une fois que l'on a terminé de parcourir tout le tableau, on échange de place(index) l'élément en mémoire par le premier élément
+*
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/selection.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `test.py`.
 
