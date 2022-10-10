@@ -40,7 +40,6 @@ def test_sort_function(sort_function: Callable, label: str):
 
     for test in tests:
         result = sort_function(test["input"].copy())
-        print(result)
 
         if len(result) != len(test["expected"]):
             error = True
