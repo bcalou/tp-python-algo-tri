@@ -8,8 +8,6 @@ import time
 array_size: int = 10_000_000
 
 
-
-
 def generate_array_of_number(array_size: int) -> list[int]:
     return [random.randint(0, 100) for i in range(array_size)]
 
