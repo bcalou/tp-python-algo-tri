@@ -77,7 +77,7 @@ Observez attentivement l'animation de tri par sélection ci-dessous pour en comp
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
 
-*On parcours la liste un a un en partant de la première position en notant le nombre le plus petit puis on le met en première position. On répète l'opération en partant de la seconde position et en mettant le plus petit nombre à la seconde position. On répète l'opération jusqu'à ce que l'on ai trié tout le tableau.*
+*On parcours la liste un a un en partant de la première position en notant le nombre le plus petit puis on échange sa position avec l'indexe 0. On répète l'opération en partant de la seconde position en échangeant sa position avec l'indexe 1. On répète l'opération jusqu'à ce que l'on ai trié tout le tableau.*
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/selection.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `test.py`.
 
@@ -96,7 +96,7 @@ Quelle semble être la complexité de notre fonction de tri ? Cela est-il logiqu
 
 Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
 
-<img src="img/insertion.gif">
+<img title="" src="img/insertion.gif" alt="" data-align="left">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? _Écrivez votre réponse ici_
 
@@ -195,3 +195,9 @@ Le nom de la PR doit contenir votre nom et celui de votre collègue si vous ête
 Vérifiez que votre code est conforme aux normes pep8 (commande `pycodestyle .` à la racine)et aux autres critères de qualité dont nous avons parlé.
 
 La PR doit également contenir un ou plusieurs graphiques présentant vos résultats sur la complexité des fonctions de tri.
+
+
+
+
+
+# TOTO : DURATION TESTS
