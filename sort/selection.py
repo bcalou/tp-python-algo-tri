@@ -12,7 +12,7 @@ def sort(array: list[int]) -> list[int]:
     array_size: int = len(array)
 
     # Move a pivot where the current minimum will be placed
-    for pivot in range(0, array_size):
+    for pivot in range(array_size):
         # Index of the current number with the minimum value
         minimum_index: int = pivot
         # Check the list to find the current minimum
