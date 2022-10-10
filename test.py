@@ -34,6 +34,8 @@ tests: list[dict] = [
 
 
 def test_sort_function(sort_function: Callable, label: str):
+    """Tests the sort functions
+    """
     error = False
     test = {}
     result = []
@@ -59,6 +61,8 @@ def test_sort_function(sort_function: Callable, label: str):
 
 
 def test_factorial():
+    """Tests the factorial function
+    """
     correct: bool = (
         get_factorial(1) == 1
         and get_factorial(2) == 2
