@@ -17,12 +17,16 @@ def main():
 def sort(array: list[int]) -> list[int]:
     """Sorts an array using the selection sort algorithm
     """
-    for i in range(len(array)):
-        min_index = i
-        for j in range(i + 1, len(array)):
-            if array[j] < array[min_index]:
-                min_index = j
-        array[i], array[min_index] = array[min_index], array[i]
+    for index_to_move in range(len(array)):
+        #On ne revérifie pas les éléments déjà triés
+        min_index = index_to_move
+        for index_to_check in range(min_index + 1, len(array)):
+            #On cherche l'index du plus petit élément
+            if array[index_to_check] < array[min_index]:
+                min_index = index_to_check
+                
+        #On échange l'élément le plus petit avec l'élément à sa place
+        array[index_to_move], array[min_index] = array[min_index], array[index_to_move]
 
     return array
 
