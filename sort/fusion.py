@@ -3,7 +3,7 @@ Fusion sort
 """
 
 import time as t
-import rd_list_generator as rg
+import sort.rd_list_generator as rg
 
 def main():
     """Main function
