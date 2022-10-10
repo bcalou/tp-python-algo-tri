@@ -198,4 +198,4 @@ Vérifiez que votre code est conforme aux normes pep8 (commande `pycodestyle .` 
 
 La PR doit également contenir un ou plusieurs graphiques présentant vos résultats sur la complexité des fonctions de tri.
 
-# TOTO : DURATION TESTS
+# TODO : DURATION TESTS
