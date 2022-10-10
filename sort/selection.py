@@ -10,27 +10,22 @@ array_size: int = 10
 
 
 def sort(array: list[int]) -> list[int]:
-    current_index_to_sort: int = 0
 
-    for current_value_to_sort in array:
-        index_of_lowest_value: int = 0
-        lowest_value: int = 100
+    for current_index_to_work_on in range(0, len(array) - 1):
+        index_of_lowest_value: int = current_index_to_work_on
+        lowest_value: int = array[index_of_lowest_value]
         
         # Only checking values in left part of array that hasn't been sorted yet
-        for index, value in enumerate(array[current_index_to_sort:]):
+        for index in range(current_index_to_work_on, len(array)):
 
-            if value < lowest_value:
-                lowest_value = value
+            if array[index] < lowest_value:
+                lowest_value = array[index]
                 index_of_lowest_value = index
 
-        # Switching the value located in the current index of work with the
+        # Switching the value located in the current index to work on with the
         # lowest one of the non-sorted part.
-        # Adding current_index_to_sort because index_of_lowest_value is a
-        # relative index in the non-sorted part of the array.
-        array[current_index_to_sort], array[index_of_lowest_value + current_index_to_sort] = (
-            array[index_of_lowest_value + current_index_to_sort], array[current_index_to_sort])
-
-        current_index_to_sort += 1
+        array[current_index_to_work_on], array[index_of_lowest_value] = (
+            array[index_of_lowest_value], array[current_index_to_work_on])
 
     return array
 
@@ -40,9 +35,9 @@ def generate_array_of_number(array_size: int) -> list[int]:
 
 
 array: list[int] = generate_array_of_number(array_size)
-print(f"Initial array : {array}")
+# print(f"Initial array : {array}")
 start_time: float = time.time()
 sorted_array: list[int] = sort(array)
 stop_time: float = time.time()
-print(f"Sorted array : {sorted_array}")
+# print(f"Sorted array : {sorted_array}")
 print(f"Spent {stop_time - start_time}s to sort array of {array_size} values by selection.")
