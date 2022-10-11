@@ -6,7 +6,6 @@ import time
 
 def sort(array: list[int]) -> list[int]:
     """Sort by insertion"""
-    start: float = time.time()
 
     # For each index of the array
     for current_index in range(0, len(array)):
@@ -20,6 +19,4 @@ def sort(array: list[int]) -> list[int]:
                 array.pop(current_index)
                 array.insert(sub_index, element_to_sort)
                 break
-    end: float = time.time()
-    print("Temps écoulé :", end - start)
     return array

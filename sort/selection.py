@@ -6,7 +6,6 @@ import time
 
 def sort(array: list[int]) -> list[int]:
     """Does a sort by selection"""
-    start: float = time.time()
     # Go through each element of list
     array_length: int = len(array)
     for current_index in range(0, array_length):
@@ -19,6 +18,4 @@ def sort(array: list[int]) -> list[int]:
                 min_element_index = sublist_index
         # After finding the min, we exchange it with our current position
         array[current_index], array[min_element_index] = array[min_element_index], array[current_index]
-    end: float = time.time()
-    print("Temps écoulé :", end - start)
     return array

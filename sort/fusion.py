@@ -6,19 +6,10 @@ import time
 
 def sort(array: list[int]) -> list[int]:
     """Does a sort by fusion"""
-    start: float = time.time()
-    result_array: list[int] = sub_sort(array)
-    end: float = time.time()
-    print("Temps écoulé :", end - start)
-    return result_array
-
-
-def sub_sort(array: list[int]) -> list[int]:
-    """Sub sort function to isolate the timer"""
     array_length: int = len(array)
     if array_length <= 1:
         return array
-    return merge(sub_sort(array[:len(array) // 2]), sub_sort(array[len(array) // 2:]))
+    return merge(sort(array[:len(array) // 2]), sort(array[len(array) // 2:]))
 
 
 def merge(array_1: list[int], array_2: list[int]) -> list[int]:
