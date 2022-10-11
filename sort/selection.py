@@ -5,7 +5,7 @@ Selection sort
 
 def sort(array: list[int]) -> list[int]:
     """Sort the list with a selection algorithm"""
-    for reference_index, reference_number in enumerate(array):
+    for reference_index in range(len(array)):
         # Our reference number is the smallest at the beginning
         smallest_number_index: int = reference_index
 
@@ -18,6 +18,6 @@ def sort(array: list[int]) -> list[int]:
         # Exchange the smallest number found with the reference number in the
         # list
         array[reference_index], array[smallest_number_index] = \
-            array[smallest_number_index], reference_number
+            array[smallest_number_index], array[reference_index]
 
     return array
