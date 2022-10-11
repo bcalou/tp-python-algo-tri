@@ -57,8 +57,11 @@ Mesurez combien de temps prend python à générer un tableau composés de :
 
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
-Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? *Écrivez votre réponse ici*
+Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? 
 
+La courbe suit une évolution linéaire : plus le nombre d'occurrences est grand, plus de temps est pris.
+On se rapproche de O(N).
+<img src="img/genetableau.png" width="400">
 <img src="img/o.webp" width="400">
 
 #### Quelques exemples de complexités courante :
@@ -90,7 +93,11 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
+
+<img src="img/triselection.png" width="400">
+
+Vu la courbe représentée par le graphique, on semble être sur du O(N^2)
 
 ### 2. Tri par insertion
 
@@ -98,7 +105,9 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 
 <img src="img/insertion.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+
+Prends le premier chiffre du tableau, le compare avec les chiffres sélectionnés précédemment et l'insert à la place ad hoc
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/insertion.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `test.py`.
 
@@ -111,7 +120,11 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
+<img src="img/triinsertion.png" width="400">
+
+Vu la courbe représentée par le graphique, on semble être sur du O(N^2)
+Les résultats sont cependant moins grands que ceux du tri par sélection.
 
 ### 3. Tri par fusion
 
@@ -146,7 +159,7 @@ Utilisez le concept de la récursion pour calculer la factorielle du nombre pass
 
 Pour rappel, la factorielle de 5 est 5 x 4 x 3 x 2 x 1 = 120.
 
-Vérifiez son bon fonctionnement en éxécutant le fichier `test.py`.
+Vérifiez son bon fonctionnement en exécutant le fichier `test.py`.
 
 #### Implémentation du tri par fusion
 
@@ -156,7 +169,9 @@ Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
 Cet algorithme est de type "diviser pour régner".
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+
+Le programme découpe le tableau en 2, jusqu'à obtenir des singletons, qu'il merge ensuite, en les triant par ordre croissant.
 
 Complétez la fonction `sort` du fichier `sort/fusion.py` en suivant les instructions suivantes.
 
@@ -165,9 +180,9 @@ Il vous faudra deux fonctions :
 - `sort`, la fonction principale, qui sera chargée de diviser les tableaux ayant plus d'un élément, et de rappeler `sort` avec ces nouveaux tableaux
 - `merge`, la fonction qui sera appelée pour fusionner deux tableaux
 
-Vérifiez son bon fonctionnement en éxécutant le fichier `test.py`.
+Vérifiez son bon fonctionnement en exécutant le fichier `test.py`.
 
-Mesurez le temps d'éxécution pour un tableau de :
+Mesurez le temps d'exécution pour un tableau de :
 
 - 1000 entrées
 - 2000 entrées
@@ -176,15 +191,24 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
 
-Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
+<img src="img/trifusion.png" width="400">
+
+Vu la courbe représentée par le graphique, on semble être sur du O(log N).
+
+Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? 
+
+Le tri par fusion est surement moins efficace sur de petits tableaux par rapports aux autres tris. Mais c'est quelque chose de difficile à démontrer avec un ordinateur aussi puissant que le notre
 
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+Python fait bien mieux.
+
+<img src="img/tripython.png" width="400">
 
 ## Pour rendre ce TP
 
