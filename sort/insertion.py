@@ -4,25 +4,31 @@ Insertion sort
 
 
 def sort(array: list[int]) -> list[int]:
+    """Sort the array with insertion sort"""
     # For each item of the input array
-    for index, element in enumerate(array):
+    # (skip the first, which is the sorted part of the array at the start)
+    for pivot_index in range(1, len(array)):
 
-        # Current element position
-        # We will modify this value until we find the new correct position
-        elementPosition: int = index
+        # Go through the sorted part of the array in reverse (descending order)
+        for sorted_index in reversed(range(pivot_index)):
 
-        # Start from the current item an go back to the beginning
-        # While we've not reach the beginning of the array and
-        # the element on the left is higher
-        while elementPosition > 0 and array[elementPosition - 1] > element:
+            # When we find a value that is smaller than the one we're sorting,
+            # we need to place the value we're sorting after it
+            if array[sorted_index] < array[pivot_index]:
 
-            # Move the element that is higher to the right
-            array[elementPosition] = array[elementPosition - 1]
+                # Move the value to its correct position and stop the for loop
+                move(array, pivot_index, sorted_index + 1)
+                break
 
-            # Decrement the elementPosition before the next while iteration
-            elementPosition -= 1
-
-        # Now we found the wanted element position, move it there
-        array[elementPosition] = element
+        # If we tried every value of the sorted part and found none smaller
+        # than the one we're sorting, if means that the value we're sorting
+        # is the smallest so far. Place it at the start.
+        else:
+            move(array, pivot_index, 0)
 
     return array
+
+
+def move(array: list, from_index: int, to_index: int):
+    """Change the position of an element inside an array"""
+    array.insert(to_index, array.pop(from_index))
