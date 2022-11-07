@@ -4,4 +4,8 @@ Recursion practice
 
 
 def get_factorial(number: int) -> int:
-    return 0
+    """Returns the factorial of a number"""
+    if number == 1:
+        return 1
+    else:
+        return number * get_factorial(number - 1)
