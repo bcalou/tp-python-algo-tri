@@ -6,7 +6,7 @@ import time
 import random
 
 
-array_size: int = 10
+array_size: int = 100
 
 
 def sort(array: list[int]) -> list[int]:
@@ -33,9 +33,9 @@ def generate_array_of_number(array_size: int) -> list[int]:
 
 
 array: list[int] = generate_array_of_number(array_size)
-# print(f"Initial array : {array}")
+print(f"Initial array : {array}")
 start_time: float = time.time()
 sorted_array: list[int] = sort(array)
 stop_time: float = time.time()
-# print(f"Sorted array : {sorted_array}")
+print(f"Sorted array : {sorted_array}")
 print(f"Spent {stop_time - start_time}s to sort array of {array_size} values by selection.")

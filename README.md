@@ -100,7 +100,7 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 <img src="img/insertion.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
-*On prend la première valeur de la partie encore non triée de la liste puis on la compare avec la précédente. Si elle est inférieure on la compare à celle encore d'avant, sinon on la place juste derrière etc...*
+*On prend la première valeur de la partie encore non triée de la liste puis on la compare avec la précédente. Si elle est inférieure on la compare à celle encore d'avant, sinon on la place juste derrière. Puis on recommence...*
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/insertion.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `test.py`.
 
@@ -158,7 +158,7 @@ Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
 Cet algorithme est de type "diviser pour régner".
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *L'algorithme divise la liste en 2, puis recommence autant de fois que nécessaire avec les listes obtenues jusqu'à n'avoir que des listes de 1 entrée. Il fusionne alors 2 listes adjacentes en comparant une à une la première entrée de chaque pour placer la plus petite à l'index suivant de la liste de sortie. Cet étape est répétée jusqu'à ce qu'il n'y ait plus qu'une seule liste.*
 
 Complétez la fonction `sort` du fichier `sort/fusion.py` en suivant les instructions suivantes.
 
@@ -178,7 +178,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Ici la courbe est linéaire, il semblerait que la complexité soit 0(n.log(n))*
 
 Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
 
@@ -197,3 +197,13 @@ Le nom de la PR doit contenir votre nom et celui de votre collègue si vous ête
 Vérifiez que votre code est conforme aux normes pep8 et aux autres critères de qualité dont nous avons parlé.
 
 La PR doit également contenir un ou plusieurs graphiques présentant vos résultats sur la complexité des fonctions de tri.
+
+
+
+
+RESTE A FAIRE
+=============
+- répondre aux questions
+- cleaner fonctions tests des codes
+- check PEP8
+- bonus : insertion v2
