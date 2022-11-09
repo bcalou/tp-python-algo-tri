@@ -3,10 +3,10 @@ Selection sort
 """
 
 import time
-import random
+from range import *
 
 
-array_size: int = 100
+ARRAY_SIZE: int = 9000
 
 
 def sort(array: list[int]) -> list[int]:
@@ -23,19 +23,16 @@ def sort(array: list[int]) -> list[int]:
         # Switching the value located in the current index to work on with the
         # lowest one of the non-sorted part.
         array[current_index_to_work_on], array[index_of_lowest_value] = (
-            array[index_of_lowest_value], array[current_index_to_work_on])
+            array[index_of_lowest_value], array[current_index_to_work_on]
+        )
 
     return array
 
 
-def generate_array_of_number(array_size: int) -> list[int]:
-    return [random.randint(0, 100) for i in range(array_size)]
-
-
-array: list[int] = generate_array_of_number(array_size)
+array: list[int] = generate_array_of_number(ARRAY_SIZE)
 print(f"Initial array : {array}")
 start_time: float = time.time()
 sorted_array: list[int] = sort(array)
 stop_time: float = time.time()
 print(f"Sorted array : {sorted_array}")
-print(f"Spent {stop_time - start_time}s to sort array of {array_size} values by selection.")
+print(f"Spent {stop_time - start_time}s to sort array of {ARRAY_SIZE} values by selection.")

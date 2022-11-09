@@ -4,16 +4,13 @@ Insertion sort
 
 
 import time
-import random
+from range import *
 
 
-array_size: int = 10
+ARRAY_SIZE: int = 10
 
 
 def sort(array: list[int]) -> list[int]:
-
-    # print(len(array))
-
     for index_of_current_value in range(1, len(array)):
         index_of_value_to_compare: int = index_of_current_value - 1
         print(f"Working on value {array[index_of_current_value]} at index {index_of_current_value}")
@@ -23,7 +20,7 @@ def sort(array: list[int]) -> list[int]:
                 break
             """elif index_of_value_to_compare == -1:
                 array = move_value(array, index_of_current_value, 0)"""
-            
+
             if array[index_of_current_value] < array[index_of_value_to_compare]:
                 print(f"Value {array[index_of_current_value]} at index {index_of_current_value} is smaller than value {array[index_of_value_to_compare]} at index {index_of_value_to_compare}, trying next one")
                 index_of_value_to_compare -= 1
@@ -31,7 +28,7 @@ def sort(array: list[int]) -> list[int]:
                 print(f"Value {array[index_of_current_value]} at index {index_of_current_value} is greater than value {array[index_of_value_to_compare]} at index {index_of_value_to_compare}, switching")
                 array = move_value(array, index_of_current_value, index_of_value_to_compare + 1)
                 break
-        
+
     return array
 
 
@@ -47,16 +44,10 @@ def move_value(array: list[int], origin_index: int, destination_index: int) -> l
     return array
 
 
-
-
-def generate_array_of_number(array_size: int) -> list[int]:
-    return [random.randint(0, 100) for i in range(array_size)]
-
-
-array: list[int] = generate_array_of_number(array_size)
+array: list[int] = generate_array_of_number(ARRAY_SIZE)
 print(f"Initial array : {array}")
 start_time: float = time.time()
 sorted_array: list[int] = sort(array)
 stop_time: float = time.time()
 print(f"Sorted array : {sorted_array}")
-print(f"Spent {stop_time - start_time}s to sort array of {array_size} values by insertion.")
+print(f"Spent {stop_time - start_time}s to sort array of {ARRAY_SIZE} values by insertion.")

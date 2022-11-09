@@ -58,7 +58,7 @@ Mesurez combien de temps prend python à générer un tableau composés de :
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
 Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ?
-*La courbe semble linéaire. Complexité : 0(n)*
+*La courbe semble linéaire. Complexité : O(n)*
 
 <img src="img/o.webp" width="400">
 
@@ -77,7 +77,7 @@ Observez attentivement l'animation de tri par sélection ci-dessous pour en comp
 <img src="img/selection.gif">
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
-*On parcours le tableau depuis le début à la recherche du plus petit nombre que l'on place à l'index 0, puis l'on recommence pour placer le plus petit des nombres restants à l'index 1, etc...*
+*On parcours le tableau depuis le début à la recherche du plus petit nombre que l'on place à l'index 0, puis l'on recommence pour placer le plus petit des nombres restants à l'index 1, etc... Ilconvient de séparer la liste en 2 partie, celle déjà triée sur la gauche et celle encore non triée sur la droite. A chaque fois on commence évidemment à vérifier à partir de la première entrée de la liste non triée.*
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/selection.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `test.py`.
 
@@ -91,7 +91,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 Tracez le graphique correspondant.
 
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
-*La courbe commence à avoir une forme exponentielle, il semblerait que la difficulté de l'algorithme soit 0(N²)*
+*La courbe commence à avoir une forme exponentielle, il semblerait que la difficulté de l'algorithme soit O(N²)*
 
 ### 2. Tri par insertion
 
@@ -113,7 +113,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Ici la courbe obtenue est exponentielle avec une pente plus forte que celle de l'algorithme de sélection, on peut supposer que la complexité est de O(2^n).*
 
 ### 3. Tri par fusion
 
@@ -178,7 +178,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Ici la courbe est linéaire, il semblerait que la complexité soit 0(n.log(n))*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Ici la courbe est linéaire, il semblerait que la complexité soit O(n.log(n))*
 
 Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
 
@@ -187,6 +187,7 @@ Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fus
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+*Python il est vachement rapide dis-donc, la courbe est une constante. Complexité : O(1).*
 
 ## Pour rendre ce TP
 
@@ -197,13 +198,3 @@ Le nom de la PR doit contenir votre nom et celui de votre collègue si vous ête
 Vérifiez que votre code est conforme aux normes pep8 et aux autres critères de qualité dont nous avons parlé.
 
 La PR doit également contenir un ou plusieurs graphiques présentant vos résultats sur la complexité des fonctions de tri.
-
-
-
-
-RESTE A FAIRE
-=============
-- répondre aux questions
-- cleaner fonctions tests des codes
-- check PEP8
-- bonus : insertion v2

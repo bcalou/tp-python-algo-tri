@@ -2,10 +2,12 @@
 Fusion sort
 """
 
-import random
-import time
 
-ARRAY_SIZE:int = 7000
+import time
+from range import *
+
+
+ARRAY_SIZE: int = 8000
 
 
 def sort(array: list[int]) -> list[int]:
@@ -28,19 +30,14 @@ def merge(array1: list[int], array2: list[int]) -> list[int]:
         else:
             result.append(array2[0])
             array2.pop(0)
-    
+
     if len(array1) == 0:
         result.extend(array2)
-    
+
     if len(array2) == 0:
         result.extend(array1)
 
     return result
-
-
-
-def generate_array_of_number(array_size: int) -> list[int]:
-    return [random.randint(0, 100) for i in range(array_size)]
 
 
 array: list[int] = generate_array_of_number(ARRAY_SIZE)
@@ -49,4 +46,4 @@ start_time: float = time.time()
 sorted_array: list[int] = sort(array)
 stop_time: float = time.time()
 print(f"Sorted array : {sorted_array}")
-print(f"Spent {stop_time - start_time}s to sort array of {ARRAY_SIZE} values by selection.")
+print(f"Spent {stop_time - start_time}s to sort array of {ARRAY_SIZE} values by fusion.")
