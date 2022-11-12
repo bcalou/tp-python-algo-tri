@@ -57,9 +57,13 @@ Mesurez combien de temps prend python à générer un tableau composés de :
 
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
+![img.png](img.png)
+
 Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? *Écrivez votre réponse ici*
 
 <img src="img/o.webp" width="400">
+
+La courbe semble évoluer comme la courbe O(n log n)
 
 #### Quelques exemples de complexités courante :
 
@@ -93,7 +97,11 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+![img_1.png](img_1.png)
+
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+
+La complexité semble être O(N²), cela est logique car chaque élément du tableau est comparé avec les autres éléments du tableau.
 
 ### 2. Tri par insertion
 
@@ -120,7 +128,11 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+![img_2.png](img_2.png)
+
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+
+La complexité semble être O(N²), cela est logique car chaque élément du tableau est comparé avec les autres éléments du tableau (semblable au tri par selection)
 
 ### 3. Tri par fusion
 
@@ -191,15 +203,22 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+![img_3.png](img_3.png)
+
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
 
-Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
+La complexité semble être O(N log N), cela est logique car les opérations à réaliser son les mêmes indépendamment de la taille de la liste.
 
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+
+![img_4.png](img_4.png)
+
+J'ai augmenté la taille des tableaux aléatoires par rapport aux précédents algorithmes car le programme de test renvoyait souvent des temps d'exécution de 0 secondes avec des tailles entre 1000 et 10000.
+La complexité semble être O(N), la courbe est semblable à celle de l'algorithme de tri par fusion, mais le temps d'exécution est bien plus rapide.
 
 ## Pour rendre ce TP
 
