@@ -101,7 +101,13 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 
 <img src="img/insertion.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? 
+
+On prend le 2eme élément de la liste et on le compare avec le précédent.
+Si il est plus petit, on retire le 2eme élément et on le place avant le premier.
+
+On passe à l'élément suivent, on le compare avec les éléments précédents jusqu'à arriver au début de la liste ou à un élément plus petit.
+Si on est à la fin de la liste, on place l'élément en premier, sinon on le place après l'élément plus petit trouvé.
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/insertion.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `test.py`.
 
@@ -159,7 +165,13 @@ Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
 Cet algorithme est de type "diviser pour régner".
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+
+Le tri par fusion consiste à séparer le tableau de valeurs en tableaux de valeurs plus petits, jusqu'à obtenir des tableaux avec une seule valeur.
+Une fois qu'on a au minimum deux tableaux avec une valeur, on les rassemble en un tableau et en placant la valeur la plus petite en premier.
+On obtient donc un tableau trié.
+Puis on rassemble chaque tableau trié entre eux en comparant à chaque fois la plus petite valeur du tableau avec la plus petite de l'autre (qui se trouve forcément en première position).
+Jusqu'à reconstituer un seul tableau, qui sera donc trié.
 
 Complétez la fonction `sort` du fichier `sort/fusion.py` en suivant les instructions suivantes.
 
