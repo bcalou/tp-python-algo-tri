@@ -29,6 +29,7 @@ def benchmark_sorting_algorithms():
     print("Tri par insertion--------------------------------------------")
     benchmark_custom_algorithms(
         "insertion", insertion_sort, NUMBER_OF_PASSES)
+
     print("Tri par séléction--------------------------------------------")
     benchmark_custom_algorithms(
         "séléction", selection_sort, NUMBER_OF_PASSES)
@@ -41,7 +42,7 @@ def benchmark_sorting_algorithms():
 
 
 def benchmark_custom_algorithms(algorithm_name: str, sort_function: Callable, number_of_millions: int = 10) -> int:
-    """Do multiple pass of sorting a "random" array using the provided sort algorithm and mesure the execution time"""
+    """Do multiple passes of sorting a "random" array using the provided sort algorithm and mesure the execution time"""
     for i in range(1, number_of_millions + 1):
         current_array = regenerate_benchmark_array(i)
         timer: Timer = Timer(
@@ -51,7 +52,7 @@ def benchmark_custom_algorithms(algorithm_name: str, sort_function: Callable, nu
 
 
 def benchmark_natif_sort(number_of_millions: int = 10):
-    """Do multiple pass of sorting a "random" array using the native python sort algorithm and mesure the execution time"""
+    """Do multiple passes of sorting a "random" array using the native python sort algorithm and mesure the execution time"""
     for i in range(1, number_of_millions + 1):
         current_array = regenerate_benchmark_array(i)
         timer: Timer = Timer(
