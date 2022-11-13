@@ -21,12 +21,12 @@ def generate_array_of_number(array_size: int) -> list[int]:
 
 
 tab_list: list[list[int]] = [generate_array_of_number(BASE_GEN_NUMBER * 1),
-generate_array_of_number(BASE_GEN_NUMBER * 2),
-generate_array_of_number(BASE_GEN_NUMBER * 3),
-generate_array_of_number(BASE_GEN_NUMBER * 4),
-generate_array_of_number(BASE_GEN_NUMBER * 5),
-generate_array_of_number(BASE_GEN_NUMBER * 6),
-generate_array_of_number(BASE_GEN_NUMBER * 7),
-generate_array_of_number(BASE_GEN_NUMBER * 8),
-generate_array_of_number(BASE_GEN_NUMBER * 9),
-generate_array_of_number(BASE_GEN_NUMBER * 10)]
+                             generate_array_of_number(BASE_GEN_NUMBER * 2),
+                             generate_array_of_number(BASE_GEN_NUMBER * 3),
+                             generate_array_of_number(BASE_GEN_NUMBER * 4),
+                             generate_array_of_number(BASE_GEN_NUMBER * 5),
+                             generate_array_of_number(BASE_GEN_NUMBER * 6),
+                             generate_array_of_number(BASE_GEN_NUMBER * 7),
+                             generate_array_of_number(BASE_GEN_NUMBER * 8),
+                             generate_array_of_number(BASE_GEN_NUMBER * 9),
+                             generate_array_of_number(BASE_GEN_NUMBER * 10)]

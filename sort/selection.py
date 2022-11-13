@@ -10,7 +10,8 @@ def sort(array: list[int]) -> list[int]:
     array_length: int = len(array)
     for current_index in range(0, array_length):
         min_element_index = current_index
-        # For each posterior element of the list, we try to find if the element is inferior.
+        # For each posterior element of the list,
+        # we try to find if the element is inferior.
         # We must pass by a secondary sublist index,
         # to have an index based on the list and not the sublist
         for sublist_index in range(current_index + 1, array_length):

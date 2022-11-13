@@ -12,7 +12,8 @@ def sort(array: list[int]) -> list[int]:
         element_to_sort = array[current_index]
         # For each element before the element, we compare it to insert it
         for sub_index in range(current_index - 1, -1, -1):
-            # If the element is inferior to current sub index and superior to the sub index before,
+            # If the element is inferior to current sub index
+            # and superior to the sub index before,
             # exception if it equals 0
             if element_to_sort < array[sub_index] and (sub_index == 0 or
                                                        element_to_sort >= array[sub_index - 1]):
