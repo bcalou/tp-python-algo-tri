@@ -5,7 +5,6 @@ Insertion sort
 
 def sort(array: list[int]) -> list[int]:
     """Sort an array using the insertion algorithm"""
-
     for current_cell in range(len(array)):
         # Pivot where the current cell will be reinserted
         pivot_cell: int = current_cell

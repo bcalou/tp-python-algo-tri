@@ -12,7 +12,6 @@ NUMBER_OF_PASSES: int = 10
 
 
 def benchmark_random_array_generation():
-    print("Génération d'array random--------------------------------------------")
     for i in range(1, 11):
         number_of_elements = i * 1_000_000
         timer: Timer = Timer(
@@ -67,5 +66,5 @@ def regenerate_benchmark_array(number_of_millions: int) -> list[int]:
     return new_benchmark_array
 
 
-# benchmark_random_array_generation()
+benchmark_random_array_generation()
 benchmark_sorting_algorithms()
