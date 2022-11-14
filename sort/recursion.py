@@ -12,4 +12,4 @@ def get_factorial(number: int) -> int:
     4! is obtained by recursion : get_factorial(4)
     So get_factorial(5) = 5 * get_factorial(5 - 1)
     """
-    return (number * get_factorial(number - 1)) if number > 1 else number
+    return number if number <= 1 else (number * get_factorial(number - 1))
