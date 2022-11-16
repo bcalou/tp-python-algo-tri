@@ -20,7 +20,7 @@ def test_sort_function(function: Callable, step: int):
     """Test the given sort function 10 times with increasing array sizes"""
     for array_size in range(step, step * 11, step):
         execution_time: float = get_execution_time(
-          lambda size=array_size: function(generate_array_of_number(size))
+            lambda size=array_size: function(generate_array_of_number(size))
         )
         print(f"{array_size} entrées : {execution_time}s")
 
