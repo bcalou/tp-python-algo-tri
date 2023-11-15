@@ -1,24 +1,18 @@
-"""
-Fusion sort
-"""
-
-
 def sort(array: list[int]) -> list[int]:
     """Sort the array with fusion sort"""
 
-    # If there are several elements in the array
-    if len(array) > 1:
+    # If there is one element or less, the array is already sorted, return it
+    if len(array) <= 1:
+        return array
 
-        # Split the array in two smaller parts and use recursion to sort them
-        middle_index: int = len(array) // 2
-        left_part: list[int] = sort(array[:middle_index])
-        right_part: list[int] = sort(array[middle_index:])
+    # There are several elements in the array
+    # Split the array in two smaller parts and use recursion to sort them
+    middle_index = len(array) // 2
+    left_part = sort(array[:middle_index])
+    right_part = sort(array[middle_index:])
 
-        # Merge the two parts to have a final sorted array
-        return merge(left_part, right_part)
-
-    # If there is only one element, the array is already sorted, return it
-    return array
+    # Merge the two parts to have a final sorted array
+    return merge(left_part, right_part)
 
 
 def merge(left_part: list[int], right_part: list[int]) -> list[int]:

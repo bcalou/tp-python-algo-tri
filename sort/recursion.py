@@ -1,8 +1,3 @@
-"""
-Recursion practice
-"""
-
-
 def get_factorial(number: int) -> int:
     """Compute the factorial of the given number
 

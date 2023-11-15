@@ -1,7 +1,3 @@
-"""
-Timing benchmarks of the sorting functions
-"""
-
 from sort.timer import test_sort_function, test_array_generation_function
 from sort.selection import sort as selection_sort
 from sort.insertion import sort as insertion_sort
@@ -24,5 +20,6 @@ def main():
 
     print("\nTri natif de python")
     test_sort_function(sorted, 1000)
+
 
 main()

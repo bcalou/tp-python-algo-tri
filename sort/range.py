@@ -1,7 +1,3 @@
-"""
-Number generator
-"""
-
 import random
 
 

@@ -1,8 +1,3 @@
-"""
-Insertion sort
-"""
-
-
 def sort(array: list[int]) -> list[int]:
     """Sort the array with insertion sort"""
     # For each item of the input array
@@ -29,6 +24,6 @@ def sort(array: list[int]) -> list[int]:
     return array
 
 
-def move(array: list, from_index: int, to_index: int):
+def move(array: list, from_index: int, to_index: int) -> None:
     """Change the position of an element inside an array"""
     array.insert(to_index, array.pop(from_index))
