@@ -1,11 +1,13 @@
 import time
 import random
 
+
 def generate_array_of_number(array_size: int) -> list[int]:
 
     start: float = time.time()
 
-    random_numbers: list[int] = [random.randint(0, 100) for i in range(array_size)]
+    random_numbers: list[int] = [random.randint(0, 100)
+                                 for i in range(array_size)]
 
     end: float = time.time()
 

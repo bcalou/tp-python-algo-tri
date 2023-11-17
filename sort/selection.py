@@ -3,11 +3,11 @@ def sort(array: list[int]) -> list[int]:
 
     array_size: int = len(array)
 
-    # `number_of_sorted_numbers` helps keep track of how many value has been 
+    # `number_of_sorted_numbers` helps keep track of how many value has been
     # sorted so far
     # It tells us where we have to insert the lowest value we found
     for number_of_sorted_numbers in range(array_size):
-        
+
         # `smallest_number` stores the smallest number found
         # `smallest_number_index` stores its index
         # we intialize them with the first value of the table that
