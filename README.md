@@ -96,7 +96,9 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
+
+L'algorithme semble etre de compléxité O(n²) car quand on double le nomdre d'entrées, le temps d'éxecution est multiplié par 4
 
 ### 2. Tri par insertion
 

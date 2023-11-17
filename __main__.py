@@ -4,7 +4,7 @@ import time
 
 
 def main():
-    for sample_size in range(1000, 11_000, 1000):
+    for sample_size in range(1_000, 35_000, 5_000):
         sample: list[int] = generate_array_of_number(sample_size)
         start: float = time.time()
         sorted_sample: list[int] = sort(sample)

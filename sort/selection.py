@@ -42,3 +42,8 @@ def sort(array: list[int]) -> list[int]:
 # Trie par insertion: taille tableau=8000, temps=3.711418867111206s
 # Trie par insertion: taille tableau=9000, temps=4.674601316452026s
 # Trie par insertion: taille tableau=10000, temps=5.86929988861084s
+# Trie par insertion: taille tableau=11000, temps=8.09083604812622s
+# Trie par insertion: taille tableau=16000, temps=15.981599569320679s
+# Trie par insertion: taille tableau=21000, temps=29.68224310874939s
+# Trie par insertion: taille tableau=26000, temps=45.70301032066345s
+# Trie par insertion: taille tableau=31000, temps=61.37903904914856s
