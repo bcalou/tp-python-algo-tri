@@ -59,6 +59,9 @@ Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécu
 
 Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? *Écrivez votre réponse ici*
 
+<span style="color:lightblue">Après des tests en générant des tableaux de 1M à 10M d'éléments, la croissance du temps de calcul semble évoluer
+de manière linéaire (O(n))</span>.
+
 <img src="img/o.webp" width="400">
 
 #### Quelques exemples de complexités courante :
@@ -75,7 +78,13 @@ Observez attentivement l'animation de tri par sélection ci-dessous pour en comp
 
 <img src="img/selection.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+<br>
+<span style="color:lightblue">
+L'algorithme semble commencer au début du tableau. A chaque itération, l'algorithme va comparer le nombre actuel au plus petit
+trouvé précédemment et ce jusqu'à atteindre la fin du tableau. Lorsque l'algorithme arrive à la fin du tableau, il échange le plus petit nombre trouvé
+avec la position du premier nombre considéré comme "non trié". Il incrémente ensuite la position du début des nombres non triés et recommence à partir de la.</span>
+
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/selection.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `python3 -m unittest`. Le test correspondant au tri par sélection doit passer.
 
@@ -88,7 +97,13 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+<img src="img/selection_exectime.png">
+
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+<br>
+<span style="color:lightblue">
+La complexité de l'algorithme par sélection semble être de O(N²), cela semble être logique car au mieux le tableau est déjà trié, au pire il faut accéder au tableau n + n-1 + n-2 + ... fois, ce qui est très long.
+</span>
 
 ### 2. Tri par insertion
 
@@ -96,7 +111,11 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 
 <img src="img/insertion.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+<br>
+<span style="color:lightblue">
+L'algorithme commence au début du tableau. Pour chaque nombre, il regarde si le nombre derrière lui est supérieur. (Ou ne fait rien pour la première itération). Si le nombre derrière est plus grand, il continue avec le nombre encore derrière jusqu'à ce que le nombre soit inférieur, auquel cas il insère le nombre juste après lui. Il marque ce nombre comme "rangé" et passe au nombre non rangé suivant.
+</span>
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/insertion.py`. Utilisez les tests automatiques pour vérifier votre implémentation.
 
@@ -109,7 +128,13 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+<img src="img/insertion_exectime.png">
+
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+<br>
+<span style="color:lightblue">
+La complexité de l'algorithme par sélection semble être de O(N²), cela semble être logique car au mieux chaque élément est trié et donc il n'y a aucun déplacement, au pire chaque élément inséré est inséré au tout début du tableau, ce qui peut être très long.
+</span>
 
 ### 3. Tri par fusion
 
