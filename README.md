@@ -179,7 +179,11 @@ Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
 Cet algorithme est de type "diviser pour régner".
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+<br>
+<span style="color:lightblue">
+L'algorithme utilise la méthode dite dichotomique (divier pour régner). Il commence par diviser le tableau en deux autant de fois que nécéssaire afin d'arriver à une seule valeur par tableau. L'algorithme fusionne ensuite les deux tableaux en comparant les deux et en insérant les valeurs des deux tableaux en ordre croissant.
+</span>
 
 Complétez la fonction `sort` du fichier `sort/fusion.py` en suivant les instructions suivantes.
 
