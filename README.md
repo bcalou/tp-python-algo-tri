@@ -59,7 +59,7 @@ Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécu
 
 Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? 
 
-Le temps de géneration de nombres aléatoire évolut de façon linéaire (résulats des tests dans le fichier `sort/range.py`)
+Le temps de géneration de nombres aléatoire évolut de façon linéaire -> O(n) (résulats des tests dans le fichier `sort/range.py`)
 
 <img src="img/o.webp" width="400">
 
@@ -77,7 +77,13 @@ Observez attentivement l'animation de tri par sélection ci-dessous pour en comp
 
 <img src="img/selection.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? 
+
+1: On parcourt le tableau et on note le nombre le plus petit
+2: Une fois le tableau parcourut on déplace le nombre le plus petit au début du tableau
+3: On reparcourt le tableau en partant de la deuxième entrée du tableau et on note le nombre le plus petit
+4: Une fois le tableau parcourut on déplace le nombre le plus petit à la deuxième case de tableau
+5: On repète se processus autant de fois qu'il y a de cases dans le tableau
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/selection.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `python3 -m unittest`. Le test correspondant au tri par sélection doit passer.
 
