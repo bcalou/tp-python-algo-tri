@@ -199,9 +199,20 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+<img src="./img/fusion_exectime.png">
 
-Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+<br>
+<span style="color:lightblue">
+La complexité (malgré les apparences) est de O(n log n). Cela est logique car contrairement aux algorithmes précédents, il n'y a pas
+d'imbrication de boucle.
+</span>
+
+Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ?
+<br>
+<span style="color:lightblue">
+Sachant que la complexité des algorithmes précédents est n² et que la complexité actuelle est de n\*log(n), le tri par fusion sera toujours plus rapide car pour n'importe quelle valeur de n supérieur à 0, n\*log(n) < n².
+</span>
 
 ### 4. sort()
 

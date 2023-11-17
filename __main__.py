@@ -6,10 +6,26 @@ import time
 
 
 def main():
-    for i in range(10000):
+    """This is the main function !"""
+
+    """for i in range(10000, 100000, 10000):
         array: list[int] = srange.generate_array_of_number(i)
         start: float = time.time()
-        print(fusion.sort(array) == sorted(array))
+        selection.sort(array)
+        end: float = time.time()
+        print(str(end - start).replace(".", ","))"""
+
+    """for i in range(10000, 100000, 10000):
+        array: list[int] = srange.generate_array_of_number(i)
+        start: float = time.time()
+        insertion.sort(array)
+        end: float = time.time()
+        print(str(end - start).replace(".", ","))"""
+
+    for i in range(100000, 1000000, 100000):
+        array: list[int] = srange.generate_array_of_number(i)
+        start: float = time.time()
+        fusion.sort(array)
         end: float = time.time()
         print(str(end - start).replace(".", ","))
 
