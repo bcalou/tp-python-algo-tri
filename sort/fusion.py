@@ -1,2 +1,48 @@
+"""Le tri fusion prend un tableau.
+Si le tableau n'est pas vide ou n'est pas composé d'un seul élément,
+Python vas le divisé en deux en rappelant la meme fonction puis le merger.
+A chaque fois avant de merger les différents tableaux vont se réduire,
+jusqu'à ce que chaque tableau n'ait qu'un élément.
+Ensuite les tableaux vont se merger petit à petit en restant croissant et
+en formant au final un seul tableau """
+
+
 def sort(array: list[int]) -> list[int]:
-    return array
+    """if length of array <=1 return array,
+    else return the merge of the left part and the right part of the array"""
+    if len(array) <= 1:
+        return array
+    return merge(sort(array[:len(array) // 2]), sort(array[len(array) // 2:]))
+
+
+def merge(array_gauche: list[int], array_droite: list[int]) -> list[int]:
+    """merge take two array and create one new array we both of them,
+    at every loop it takes the smallest number between two arrays
+    and remove from the array. Then we return new array created"""
+    new_array: list[int] = []
+    while (True):
+        if (array_gauche == []):
+            new_array += array_droite
+            return new_array
+        elif (array_droite == []):
+            new_array += array_gauche
+            return new_array
+        if array_droite[0] < array_gauche[0]:
+            new_array.append(array_droite.pop(0))
+        else:
+            new_array.append(array_gauche.pop(0))
+
+
+"""
+Résultat :
+Le résultat pour 10000 entrées est 0.14179372787475586
+Le résultat pour 20000 entrées est 0.11987948417663574
+Le résultat pour 30000 entrées est 0.18050265312194824
+Le résultat pour 40000 entrées est 0.32453370094299316
+Le résultat pour 50000 entrées est 0.38787841796875
+Le résultat pour 60000 entrées est 0.49108314514160156
+Le résultat pour 70000 entrées est 0.6442813873291016
+Le résultat pour 80000 entrées est 0.9117996692657471
+Le résultat pour 90000 entrées est 0.9976096153259277
+Le résultat pour 100000 entrées est 1.2517235279083252
+"""
