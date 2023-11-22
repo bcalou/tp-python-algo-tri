@@ -1,10 +1,12 @@
-"""Le tri fusion prend un tableau.
+"""
+Le tri fusion prend un tableau.
 Si le tableau n'est pas vide ou n'est pas composé d'un seul élément,
 Python vas le divisé en deux en rappelant la meme fonction puis le merger.
 A chaque fois avant de merger les différents tableaux vont se réduire,
 jusqu'à ce que chaque tableau n'ait qu'un élément.
 Ensuite les tableaux vont se merger petit à petit en restant croissant et
-en formant au final un seul tableau """
+en formant au final un seul tableau
+"""
 
 
 def sort(array: list[int]) -> list[int]:
@@ -45,4 +47,18 @@ Le résultat pour 70000 entrées est 0.6442813873291016
 Le résultat pour 80000 entrées est 0.9117996692657471
 Le résultat pour 90000 entrées est 0.9976096153259277
 Le résultat pour 100000 entrées est 1.2517235279083252
+
+Le tri fusion a l'air d'etre de complexité N*log(N)
+car on subdivise le tri en plusieurs tri de 1 élément.
+Puis on les recombine ensemble en les lisant.
+Le nombre d'étape ou on lit chaque valeur est
+a chaque fois que l'on merge des élements (2**k)>=n>(2**(k-1))+1.
+Il a donc k étapes ou on lit tout n. k est plus petit que N
+car on prend le k supérieur ou égal à N
+
+Si on considère que le tri par fusion a une complexité inférieur aux autres tri
+alors plus le nombre de valeur va augmenté
+plus l'écart entre les différentes complexités va augmenté également.
+Le tri sera toujours plus rapide qu'un tri avec une complexité supérieur
+
 """

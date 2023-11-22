@@ -28,4 +28,10 @@ Le résultat pour 7000 entrées est 1.2588913440704346
 Le résultat pour 8000 entrées est 1.573819637298584
 Le résultat pour 9000 entrées est 2.006103038787842
 Le résultat pour 10000 entrées est 2.4676148891448975
+
+Le tri par insertion est de complexité O(N**2)
+Car entre la première et la dernière valeur les entrées sont multiplé par 10
+alors que les temps sont multipliés par 100.
+De plus on a directement une double boucle dans le programme
+qui regarde tout les éléments, ce qui fait N*N donc N**2
 """

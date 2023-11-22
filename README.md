@@ -75,7 +75,10 @@ Observez attentivement l'animation de tri par sélection ci-dessous pour en comp
 
 <img src="img/selection.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? 
+Selon moi le tri par selection va regarder toute la liste,
+il va selectionner l'element le plus petit et le placer au début de la liste.
+Ensuite, il recommence avec le reste de la liste tant qu'elle n'est pas vide.
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/selection.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `python3 -m unittest`. Le test correspondant au tri par sélection doit passer.
 
@@ -88,7 +91,12 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+Le tri par selection est de complexité O(N**2)
+Car entre la première et la dernière valeur les entrées sont multiplé par 10
+alors que les temps sont multipliés par 100.
+De plus on a directement une double boucle dans le programme
+qui regarde tout les éléments, ce qui fait N*N donc N**2
 
 ### 2. Tri par insertion
 
@@ -96,7 +104,10 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 
 <img src="img/insertion.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? 
+Selon moi, Le tri par insertion va regarder le deuxieme element de la liste
+et le placer avant ou après le premier si il est plus petit ou non. Puis faire
+pareil avec les autres éléments en les comparant avec tous ceux avant
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/insertion.py`. Utilisez les tests automatiques pour vérifier votre implémentation.
 
@@ -109,7 +120,12 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
+Le tri par insertion est de complexité O(N**2)
+Car entre la première et la dernière valeur les entrées sont multiplé par 10
+alors que les temps sont multipliés par 100.
+De plus on a directement une double boucle dans le programme
+qui regarde tout les éléments, ce qui fait N*N donc N**2
 
 ### 3. Tri par fusion
 
@@ -154,7 +170,14 @@ Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
 Cet algorithme est de type "diviser pour régner".
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+Le tri fusion prend un tableau.
+Si le tableau n'est pas vide ou n'est pas composé d'un seul élément,
+Python vas le divisé en deux en rappelant la meme fonction puis le merger.
+A chaque fois avant de merger les différents tableaux vont se réduire,
+jusqu'à ce que chaque tableau n'ait qu'un élément.
+Ensuite les tableaux vont se merger petit à petit en restant croissant et
+en formant au final un seul tableau
 
 Complétez la fonction `sort` du fichier `sort/fusion.py` en suivant les instructions suivantes.
 
@@ -174,9 +197,20 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
+Le tri fusion a l'air d'etre de complexité N*log(N)
+car on subdivise le tri en plusieurs tri de 1 élément.
+Puis on les recombine ensemble en les lisant.
+Le nombre d'étape ou on lit chaque valeur est 
+a chaque fois que l'on merge des élements (2**(k))>=n>(2**(k-1))+1.
+Il a donc k étapes ou on lit tout n. k est plus petit que N
+car on prend le k supérieur ou égal à N
 
-Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
+Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? 
+Si on considère que le tri par fusion a une complexité inférieur aux autres tri
+alors plus le nombre de valeur va augmenté
+plus l'écart entre les différentes complexités va augmenté également.
+Le tri sera toujours plus rapide qu'un tri avec une complexité supérieur
 
 ### 4. sort()
 

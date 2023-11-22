@@ -1,6 +1,6 @@
 """
 Selon moi le tri par selection va regarder toute la liste,
-il va selectionner l'element le plus petitet le pla cer au début de la liste.
+il va selectionner l'element le plus petit et le placer au début de la liste.
 Ensuite, il recommence avec le reste de la liste tant qu'elle n'est pas vide.
 """
 
@@ -24,14 +24,20 @@ def sort(array: list[int]) -> list[int]:
 
 """
 Résultat :
-Le résultat pour 1000000 entrées est 0.45252156257629395
-Le résultat pour 2000000 entrées est 0.9531290531158447
-Le résultat pour 3000000 entrées est 1.4106464385986328
-Le résultat pour 4000000 entrées est 1.9002070426940918
-Le résultat pour 5000000 entrées est 2.3450512886047363
-Le résultat pour 6000000 entrées est 2.733344554901123
-Le résultat pour 7000000 entrées est 3.4658050537109375
-Le résultat pour 8000000 entrées est 4.107401609420776
-Le résultat pour 9000000 entrées est 4.056782007217407
-Le résultat pour 10000000 entrées est 4.458217620849609
+Le résultat pour 1000 entrées est 0.027270793914794922
+Le résultat pour 2000 entrées est 0.10175871849060059
+Le résultat pour 3000 entrées est 0.2276897430419922
+Le résultat pour 4000 entrées est 0.41335439682006836
+Le résultat pour 5000 entrées est 0.7159967422485352
+Le résultat pour 6000 entrées est 0.9541590213775635
+Le résultat pour 7000 entrées est 1.2389578819274902
+Le résultat pour 8000 entrées est 1.6056084632873535
+Le résultat pour 9000 entrées est 2.092197895050049
+Le résultat pour 10000 entrées est 2.540802001953125
+
+Le tri par selection est de complexité O(N**2)
+Car entre la première et la dernière valeur les entrées sont multiplé par 10
+alors que les temps sont multipliés par 100.
+De plus on a directement une double boucle dans le programme
+qui regarde tout les éléments, ce qui fait N*N donc N**2
 """

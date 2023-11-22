@@ -50,7 +50,7 @@ def do_function(use_tri: Function) -> list[float]:
 
         # Use fusion sort on tab from 10_000 to 100_000
         if (use_tri == Function.FUSION_SORT):
-            fusion_sort(generate_array_of_number(LOOP_REQUIRED[element] * 10))
+            fusion_sort(generate_array_of_number(LOOP_REQUIRED[element] * 100))
 
         end: float = time.time()
         timer_tab.append(end-start)
@@ -74,7 +74,7 @@ def write_result(timer_tab: list[float], use_tri: Function):
 
         # print time for fusion sort from 10_000 to 100_000
         elif (use_tri == Function.FUSION_SORT):
-            print("Le résultat pour " + str(LOOP_REQUIRED[element] * 10) +
+            print("Le résultat pour " + str(LOOP_REQUIRED[element] * 100) +
                   " entrées est " + str(timer_tab[element]))
 
         # print time for fusion sort from 1_000 to 10_000
