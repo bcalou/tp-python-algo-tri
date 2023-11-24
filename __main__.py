@@ -86,4 +86,4 @@ def write_result(timer_tab: list[float], use_tri: Function):
 # main(Function.SELECTION_SORT)
 # main(Function.INSERTION_SORT)
 # main(Function.FACTORIAL)
-main(Function.FUSION_SORT)
+# main(Function.FUSION_SORT)
