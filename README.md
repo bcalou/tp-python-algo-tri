@@ -219,7 +219,9 @@ Lors de mes tests, le tri par fusion a été le plus rapide peut importe la tail
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
-Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;
+
+La fonction sort de python est largement plus rapide, en moyenne 100x plus rapide
 
 ## Pour rendre ce TP
 
