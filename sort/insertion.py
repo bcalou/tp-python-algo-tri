@@ -1,4 +1,6 @@
 def sort(array: list[int]) -> list[int]:
+    """Sort the array using insertion sort"""
+
     # nombre de nombre trié dans le tableau
     # On commence à 1 puisque qu'un tableau de taille 1 est trié
     number_of_sorted_numbers: int = 1
