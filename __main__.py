@@ -11,8 +11,8 @@ def main():
         start: float = time.time()
         sample: list[int] = generate_array_of_number(sample_size)
         end: float = time.time()
-        print(f"Génération de {sample_size} nombres aléatoires en {end-start:.2f}s")
-
+        print(f"Génération de {sample_size} nombres aléatoires en \
+              {end-start:.2f}s")
 
     for sample_size in range(1_000, 11_000, 1_000):
         sample: list[int] = generate_array_of_number(sample_size)
@@ -47,7 +47,6 @@ def main():
         end: float = time.time()
         print(f"Tri Python: taille tableau={sample_size}, \
               temps={end-start}s")
-
 
 
 main()

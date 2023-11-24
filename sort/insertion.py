@@ -7,10 +7,10 @@ def sort(array: list[int]) -> list[int]:
     for index in range(1, len(array)):
         number: int = array[index]
         # on parcours la partie trié du tableau dans le sens décroissant
-        for sorted_number_index in reversed(range(0, number_of_sorted_numbers)):
-            sorted_number = array[sorted_number_index]
+        for sorted_numberIndex in reversed(range(0, number_of_sorted_numbers)):
+            sorted_number = array[sorted_numberIndex]
 
-            if number < sorted_number and sorted_number_index > 0:
+            if number < sorted_number and sorted_numberIndex > 0:
                 # Le nombre actuel est plus petit que le nombre trié
                 # et on n'est pas encore a la première case
                 # On continue de traverser le tableau trié
@@ -21,15 +21,14 @@ def sort(array: list[int]) -> list[int]:
             # On doit donc vérifier où placer le nombre
             array.pop(index)
             if number < sorted_number:
-                array.insert(sorted_number_index, number)
+                array.insert(sorted_numberIndex, number)
             else:
-                array.insert(sorted_number_index+1, number)
+                array.insert(sorted_numberIndex+1, number)
 
             # Le nombre de nombre trié augmente
             number_of_sorted_numbers += 1
 
             # On a placé notre nombre, on quitte cette boucle
             break
-
 
     return array

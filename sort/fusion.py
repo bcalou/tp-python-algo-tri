@@ -19,7 +19,7 @@ def fusion_sort(array: list[int]) -> list[int]:
 def fuse_2_array(array1: list[int], array2: list[int]) -> list[int]:
     if array2 == []:
         return array1
-    
+
     index1: int = 0
     index2: int = 0
 
@@ -46,6 +46,6 @@ def fuse_2_array(array1: list[int], array2: list[int]) -> list[int]:
         else:
             res.append(number2)
             index2 += 1
-    
+
     # print(f"fuse {array1} and {array2} => {res}")
     return res
