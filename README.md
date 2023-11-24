@@ -57,7 +57,7 @@ Mesurez combien de temps prend python à générer un tableau composés de :
 
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
-Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? *Écrivez votre réponse ici*
+Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? Malgré une précision assez mauvaise distingue une courbe semblante à O(n log n)
 
 <img src="img/o.webp" width="400">
 
