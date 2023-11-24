@@ -102,6 +102,8 @@ Quelle semble être la complexité de notre fonction de tri ? Cela est-il logiqu
 *partie reparcouru pour chaque élément comparé, cela décuple au carré le nombre*
 *d'opération nécessaires au pire cas.*
 
+<img src="img/results/selection.png">
+
 ### 2. Tri par insertion
 
 Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
@@ -129,10 +131,9 @@ Tracez le graphique correspondant.
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ?
 
 *Pour les même raison que citée précédemment, la complexité au pire cas est de* 
-*O(n^2) en théorie. On observe cependant une complexité **presque** linéaire **comparé***
-*à la sélection. Il s'avère que le reste du tableau n'est pas nécessairement*
-*entièrement reparcouru comme pour la sélection, ce qui explique son gain*
-*de performances notable.*
+*O(n^2). L'imbrication de deux boucles justifie cette exponentialité.*
+
+<img src="img/results/insertion.png">
 
 ### 3. Tri par fusion
 
@@ -206,15 +207,29 @@ Tracez le graphique correspondant.
 
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
 
-*En observant la courbe de*
+*En observant la courbe de la fusion, on remarque une fonction linéaire. Ce qui*
+*n'est pas absurde lorsqu'on sait qu'une boucle est appelée lors du tri,*
+*assoçié à une recherche dichotomique. On peut donc en déduire que la* 
+*complexité est de O(nlog(n)).*
 
-Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
+<img src="img/results/fusion.png">
+
+
+Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Le tri par fusion risque d'êtr plus lent pour des tableaux de très*
+*petite taille, engendré par le calcul supplémentaire du à la séparation*
+*dichotomique. On peut s'en douter en obesrvant la courbe d'un logarithme, qui*
+*croit très rapidement au départ avant d'avoir un comportement asymptotique à*
+*l'infini.*
 
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+
+*Je n'ai plus les mots :*
+
+<img src="img/results/wtf.png">
 
 ## Pour rendre ce TP
 
@@ -225,3 +240,5 @@ Le nom de la PR doit contenir votre nom.
 Vérifiez que votre code est conforme aux normes pep8 et aux autres critères de qualité dont nous avons parlé.
 
 La PR doit également contenir un ou plusieurs graphiques présentant vos résultats sur la complexité des fonctions de tri.
+
+<img src="img/results/all.png">
