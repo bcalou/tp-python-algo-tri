@@ -57,7 +57,7 @@ Mesurez combien de temps prend python à générer un tableau composés de :
 
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
-Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? *Écrivez votre réponse ici*
+Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? O(n) (Par ressemblance visuelle avec le graphique fourni, O(n) et O(n log n) sont acceptables. Il faut l'explication des complexités, ou un graphique exposant davantage la courbe de n log n  pour répondre à la question.)
 
 <img src="img/o.webp" width="400">
 
@@ -75,7 +75,8 @@ Observez attentivement l'animation de tri par sélection ci-dessous pour en comp
 
 <img src="img/selection.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+On explore un tableau à la recherche de la plus petite valeur, puis on la place au premier emplacement disponible. À la première itération, la plus petite valeur du tableau est donc placée à l'index 0. À la seconde, la valeur la plus petite trouvée entre l'index 1 et la fin du tableau est placée à l'index 1, etc.
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/selection.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `python3 -m unittest`. Le test correspondant au tri par sélection doit passer.
 
@@ -88,7 +89,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? O(n²). Cela semble logique car pour chaque entrée supplémentaire, à chaque itération (il y en a n * n-index soit presque n²) on explore une valeur de plus. Soit n² fois plus de valeurs.
 
 ### 2. Tri par insertion
 
@@ -96,7 +97,8 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 
 <img src="img/insertion.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+On regarde pour chaque valeur si elle est plus petite que celle qui la précède. Si c'est le cas, elle est placée avant elle. Cela est répété jusqu'à ce que la valeur précédente soit plus petite que celle qu'on déplace.
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/insertion.py`. Utilisez les tests automatiques pour vérifier votre implémentation.
 
@@ -109,7 +111,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? O(n²). En effet, pour chaque élément dans le tableau, dans le pire des cas on itère entre le début du tableau et l'index de ce nombre. Cela représente presque n² itérations pour explorer tous les éléments.
 
 ### 3. Tri par fusion
 
@@ -154,7 +156,8 @@ Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
 Cet algorithme est de type "diviser pour régner".
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ?
+On sépare un tableau en 2 jusqu'à ce que tous les élements soient isolés. Ensuite, on compare les élements deux à deux. Le plus petit est placé au début d'un nouveau tableau de 2 élémnts. On compare ensuite deux à deux les premières valeurs des tableaux de deux éléments. La plus petite valeur est placé au début d'un tableau de 4 éléments. On compare ensuite la première valeur du tableau de deux éléments avec la deuxième du tableau dont la première valeur a été prise. On place la plus petite de ces valeurs à la suite de la première. On itère jusqu'à avoir reconstituté un unique tableau.
 
 Complétez la fonction `sort` du fichier `sort/fusion.py` en suivant les instructions suivantes.
 
