@@ -91,7 +91,7 @@ Tracez le graphique correspondant.
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
 
 ### 2. Tri par insertion
-
+ 
 Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
 
 <img src="img/insertion.gif">
