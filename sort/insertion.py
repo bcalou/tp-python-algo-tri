@@ -6,10 +6,9 @@ def sort(array: list[int]) -> list[int]:
     :return: The sorted array.
     """
     for i in range(1, len(array)):
-        key: int = array[i]
+        value_to_insert: int = array[i]
         j: int = i - 1
-        while j >= 0 and key < array[j]:
-            array[j + 1] = array[j]
+        while j >= 0 and value_to_insert < array[j]:
             j -= 1
-        array[j + 1] = key
+        array.insert(j + 1, array.pop(i))
     return array
