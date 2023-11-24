@@ -61,6 +61,8 @@ Comment vous semble évoluer la courbe ? Observez bien les différentes courbes 
 
 Le temps de géneration de nombres aléatoire évolut de façon linéaire -> O(n) (résulats des tests dans le fichier `sort/range.py`)
 
+<img src="img/graph_generation_nombres_aleatoires.PNG">
+
 <img src="img/o.webp" width="400">
 
 #### Quelques exemples de complexités courante :
@@ -100,6 +102,8 @@ Quelle semble être la complexité de notre fonction de tri ? Cela est-il logiqu
 
 L'algorithme semble etre de compléxité O(n²) car quand on double le nomdre d'entrées, le temps d'éxecution est multiplié par 4
 
+<img src="img/graph_tri_par_selection.PNG">
+
 ### 2. Tri par insertion
 
 Observez attentivement l'animation de tri par insertion ci-dessous pour en comprendre le fonctionnement.
@@ -128,7 +132,11 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
+
+Le début du graphique resemble à la courbe du tri par selection, donc un O(n²) mais elle semble progrésser plus lentement ensuite pour ressembler un peu plus à un O(n*log(n))
+
+<img src="img/graph_tri_par_insertion.PNG">
 
 ### 3. Tri par fusion
 
