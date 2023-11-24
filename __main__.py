@@ -22,7 +22,7 @@ def main():
     fusion_times: list[float] = []
     sort_times: list[float] = []
 
-    for i in range(100000, 2000001, 50000):
+    for i in range(1000, 20001, 500):
 
         print(f"Doing it with {i}")
 
@@ -37,27 +37,27 @@ def main():
 
         # compute array selection sort
 
-        # selection_array = rand_numbers_array.copy()
-        # timer_start = time.time()
-        # selection.sort(selection_array)
-        # timer_end: float = time.time()
-        # selection_times.append(timer_end - timer_start)
+        selection_array = rand_numbers_array.copy()
+        timer_start = time.time()
+        selection.sort(selection_array)
+        timer_end: float = time.time()
+        selection_times.append(timer_end - timer_start)
 
         # compute array insertion sort
 
-        # insertion_array = rand_numbers_array.copy()
-        # timer_start = time.time()
-        # insertion.sort(insertion_array)
-        # timer_end: float = time.time()
-        # insertion_times.append(timer_end - timer_start)
+        insertion_array = rand_numbers_array.copy()
+        timer_start = time.time()
+        insertion.sort(insertion_array)
+        timer_end: float = time.time()
+        insertion_times.append(timer_end - timer_start)
 
         # compute array fusion sort
 
-        # fusion_array = rand_numbers_array.copy()
-        # timer_start = time.time()
-        # fusion.sort(fusion_array)
-        # timer_end: float = time.time()
-        # fusion_times.append(timer_end - timer_start)
+        fusion_array = rand_numbers_array.copy()
+        timer_start = time.time()
+        fusion.sort(fusion_array)
+        timer_end: float = time.time()
+        fusion_times.append(timer_end - timer_start)
 
         # compute array sort from python
 
@@ -69,11 +69,11 @@ def main():
 
     plt.plot(array_sizes, generation_times, "-",
              color='lightgrey', label='Array Generation')
-    # plt.plot(array_sizes, selection_times, "-",
-    #         color='darkolivegreen', label='Selection')
-    # plt.plot(array_sizes, insertion_times, "-",
-    #         color='mediumslateblue', label='Insertion')
-    # plt.plot(array_sizes, fusion_times, "-", color='peru', label='Fusion')
+    plt.plot(array_sizes, selection_times, "-",
+             color='darkolivegreen', label='Selection')
+    plt.plot(array_sizes, insertion_times, "-",
+             color='mediumslateblue', label='Insertion')
+    plt.plot(array_sizes, fusion_times, "-", color='peru', label='Fusion')
     plt.plot(array_sizes, sort_times, "-", color='coral', label="Sort")
 
     plt.legend()
