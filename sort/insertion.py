@@ -6,7 +6,12 @@ pareil avec les autres éléments en les comparant avec tous ceux avant
 
 
 def sort(array: list[int]) -> list[int]:
-    """We make two loop"""
+    """We make two loop,
+    then compare one element of the second loop with element before,
+    if it is smaller we permute those two elements we continue compare
+    with the element before until we reach the top of the list
+    or we find an element smaller. We do this the length of the list.
+    So We insert one element between other"""
     for increment in range(len(array)):
         for implementation in range(increment):
             if array[increment] < array[implementation]:

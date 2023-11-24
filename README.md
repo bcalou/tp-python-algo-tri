@@ -218,6 +218,9 @@ Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
 
+Le tri sort de python est environ 100 fois plus rapide que notre tri fusion.
+Sa complexité semble etre N
+
 ## Pour rendre ce TP
 
 Merci de faire une Pull Request vers ce repository.
