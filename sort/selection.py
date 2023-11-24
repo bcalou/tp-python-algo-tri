@@ -17,5 +17,4 @@ def sort(array: list[int]) -> list[int]:
         current_index += 1
         lowest_value_index = current_index
 
-
     return array

@@ -4,7 +4,7 @@ def sort(array: list[int]) -> list[int]:
 
     for index, value in enumerate(array):
         for i in range(1, len(array[:index])+1):
-            #Can't compare a value with nothing before
+            # Can't compare a value with nothing before
             if index == 0:
                 break
             if value < array[index-i]:
