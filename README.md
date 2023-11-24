@@ -88,7 +88,11 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+<img src="img/selection graph.png">
+
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+
+* La complexité de notre fonction de tri est O(n²). C'est logique par rapport au code que nous avons implémenté car nous avons deux boucles imbriquées.
 
 ### 2. Tri par insertion
 
@@ -109,7 +113,11 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+<img src="img/insertion graph.png">
+
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+
+* La complexité de notre fonction de tri est O(n²). C'est logique par rapport au code que nous avons implémenté car nous avons deux boucles imbriquées.
 
 ### 3. Tri par fusion
 
@@ -174,15 +182,24 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+<img src="img/fusion graph.png">
+
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
+* La complexité de notre fonction de tri est O(n log n).
+ça peut s'expliquer par le fait que nous divisons le tableau en deux à chaque fois, et que nous fusionnons les tableaux en les triant.
+la division du tableau en deux se fait en O(log n) et la fusion se fait en O(n). 
+
 
 Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
 
+* Le tri par fusion est plus rapide que les autres tris abordés pour toutes les tailles de tableaux.
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+
+* après avoir fait plusieurs tests, il s'avère que la fonction sort() de python est plus rapide que le tri fusion qui était pourtant le plus rapide des tris que nous avons implémentés.
 
 ## Pour rendre ce TP
 
