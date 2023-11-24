@@ -21,11 +21,12 @@ def sort(array: list[int]) -> list[int]:
             # On insère notre nombre, On vérifie si num<sorted_num
             # Car on peut se trouver dans le cas où index==0
             # On doit donc vérifier où placer le nombre
+            #
+            # Si number > sorted_number alors,
+            # on insert number après l'index actuel
+            # Sinon insert à l'index actuel
             array.pop(index)
-
-            # Si number > sorted_number alors insert à l'index 1
-            # Sinon insert à l'index 0
-            array.insert(number > sorted_number, number)
+            array.insert(sorted_num_index + (number > sorted_number), number)
 
             # Le nombre de nombre trié augmente
             number_of_sorted_numbers += 1
