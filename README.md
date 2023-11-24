@@ -57,7 +57,9 @@ Mesurez combien de temps prend python à générer un tableau composés de :
 
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
-Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? *Écrivez votre réponse ici*
+<img src="./img/array_exectime.png">
+
+Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ?
 
 <span style="color:lightblue">Après des tests en générant des tableaux de 1M à 10M d'éléments, la croissance du temps de calcul semble évoluer
 de manière linéaire (O(n))</span>.
@@ -223,6 +225,15 @@ Sachant que la complexité des algorithmes précédents est n² et que la comple
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+
+<img src="./img/python_exectime.png"/>
+
+<span style="color:lightblue">
+Python semble faire mieux que nous, le temps d'exécution comparé au Fusion Sort est plus rapide d'un facteur 100 !
+Pour une même taille de tableau, le sort natif de python met 100x moins de temps que notre fusion sort.
+<br>
+La complexité de l'algorithme implémenté par python semble être 0(n).
+</span>
 
 ## Pour rendre ce TP
 
