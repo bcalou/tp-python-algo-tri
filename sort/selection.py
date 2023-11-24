@@ -8,23 +8,20 @@ def sort(array: list[int]) -> list[int]:
     # It tells us where we have to insert the lowest value we found
     for number_of_sorted_numbers in range(array_size):
 
-        # `smallest_number` stores the smallest number found
-        # `smallest_number_index` stores its index
-        # we intialize them with the first value of the table that
-        #  isnt sorted yet
-        smallest_number: int = array[number_of_sorted_numbers]
+        # `smallest_number_index` stores the index of the smallest number
+        # we intialize it with the index of the first value of the table that
+        # isnt sorted yet
         smallest_number_index: int = number_of_sorted_numbers
 
         # We go through the part of the table that is not sorted
         # and store the smallest value
         for index in range(number_of_sorted_numbers, array_size):
             number: int = array[index]
-            if number < smallest_number:
-                smallest_number = number
+            if number < array[smallest_number_index]:
                 smallest_number_index = index
 
         # We remove the smallest number with its index
-        array.pop(smallest_number_index)
+        smallest_number: int = array.pop(smallest_number_index)
         # We insert it back after the other sorted numbers
         array.insert(number_of_sorted_numbers, smallest_number)
 
