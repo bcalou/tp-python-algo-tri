@@ -181,7 +181,11 @@ Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
 Cet algorithme est de type "diviser pour régner".
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? 
+
+1: On divise le tableau, autant de fois que nécessaire afin d'arriver avec des morceaux de taille 1
+2: On compare les morceaux de taille 1 et on les concatène dans l'ordre croissant, on obtient des morceaux de taille 2 (et 1 morceau de taille 1 si la taille du tableau est impaire)
+3: On fusion les tableaux en placant les nombres dans l'orde croissant on répète cette étape jusquà avoir fusion tout les morceaux en un seul
 
 Complétez la fonction `sort` du fichier `sort/fusion.py` en suivant les instructions suivantes.
 
@@ -201,9 +205,15 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
 
-Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
+La compléxité semble être O(n*log(n))
+
+<img src="img/graph_tri_par_fusion.PNG">
+
+Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? 
+
+Lors de mes tests, le tri par fusion a été le plus rapide peut importe la taille des données
 
 ### 4. sort()
 
