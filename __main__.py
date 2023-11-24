@@ -65,5 +65,9 @@ def main():
     times, sizes = get_1k_10k_arrays_execution_times(fusion.sort)
     draw_graph(sizes, times, "Fusion sort")
 
+    # Python built-in sort
+    times, sizes = get_1k_10k_arrays_execution_times(sorted)
+    draw_graph(sizes, times, "Python built-in sort")
+
 
 main()

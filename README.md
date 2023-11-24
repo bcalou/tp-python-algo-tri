@@ -203,13 +203,17 @@ Tracez le graphique correspondant.
 
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Le tri par fusion semble avoir une complexité en O(n log n). Cela semble logique par rapport à monde code.*
 
-Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
+Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Le tri par fusion est en général plus rapide que l'insertion et la sélection sur les tableaux de très grandes tailles. Sur les petits tableaux, il est moins rapide.*
 
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+
+*Il est en effet bien plus rapide : *
+
+<img src="graphs/python-built-in-sort.png">
 
 ## Pour rendre ce TP
 
