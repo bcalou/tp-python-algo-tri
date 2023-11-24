@@ -38,7 +38,7 @@ def main():
         fusion.sort(array)
         end: float = time.time()
         print(str(end - start).replace(".", ","))"""
-    
+
     # Python Sort
     for i in range(100000, 3100000, 100000):
         array: list[int] = srange.generate_array_of_number(i)
