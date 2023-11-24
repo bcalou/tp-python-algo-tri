@@ -106,7 +106,16 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 
 <img src="img/insertion.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? 
+
+1: On selectionne le premier nombre et on va considérer qu'il se trouve dans une partie du tableau qui est trié 
+
+2: On prends le deuxième nome et on va le comparer avec le premier nombre, si il est plus petit on va le placer avant le premier, sinon on le place en deuxième. Maintenant la partie trié de tableau est de taille 2
+
+3: On prends le troisème nombre, on le compare avec le deuxième, si il est plus petit on le compare au premier, on le place en fonction et 
+notre tableau trié contient maintenant 3 nombres
+
+4: On répete ces opérations pour tout les nombre du tableau 
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/insertion.py`. Utilisez les tests automatiques pour vérifier votre implémentation.
 
