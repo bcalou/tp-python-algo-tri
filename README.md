@@ -80,6 +80,8 @@ Observez attentivement l'animation de tri par sélection ci-dessous pour en comp
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
 
+* Le tri par sélection consiste à parcourir le tableau pour trouver le plus petit élément, puis à le placer en première position. On recommence ensuite avec le deuxième plus petit élément, et ainsi de suite jusqu'à ce que le tableau soit trié.
+
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/selection.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `python3 -m unittest`. Le test correspondant au tri par sélection doit passer.
 
 Mesurez le temps d'éxécution pour un tableau de :
@@ -91,7 +93,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-<img src="img/selection graph.png">
+<img src="img/selection graph.png" width="600">
 
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
 
@@ -105,6 +107,8 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
 
+* Le tri par insertion consiste à parcourir le tableau en plaçant au fur et à mesure chaque élément à sa place dans le tableau trié. Pour cela, on compare l'élément avec les éléments précédents, et on les décale vers la droite tant que l'élément est plus petit.
+
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/insertion.py`. Utilisez les tests automatiques pour vérifier votre implémentation.
 
 Mesurez le temps d'éxécution pour un tableau de :
@@ -116,7 +120,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-<img src="img/insertion graph.png">
+<img src="img/insertion graph.png" width="600">
 
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
 
@@ -167,6 +171,8 @@ Cet algorithme est de type "diviser pour régner".
 
 Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
 
+* Le tri par fusion consiste à diviser le tableau en deux, puis de diviser chaque moitié jusqu'à ce qu'il ne reste plus que 1 ou 2 éléments. On trie ces éléments, puis on fusionne les tableaux, on les tries etc... jusqu'à ce qu'il ne reste plus qu'un seul tableau trié.
+
 Complétez la fonction `sort` du fichier `sort/fusion.py` en suivant les instructions suivantes.
 
 Il vous faudra deux fonctions :
@@ -185,7 +191,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-<img src="img/fusion graph.png">
+<img src="img/fusion graph.png" width="600">
 
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? 
 * La complexité de notre fonction de tri est O(n log n).
@@ -196,6 +202,7 @@ la division du tableau en deux se fait en O(log n) et la fusion se fait en O(n).
 Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
 
 * Le tri par fusion est plus rapide que les autres tris abordés pour toutes les tailles de tableaux.
+
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.

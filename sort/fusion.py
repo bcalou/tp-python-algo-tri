@@ -11,6 +11,7 @@ def merge(left: list[int], right: list[int]) -> list[int]:
     j: int = 0
 
     while i < len(left) and j < len(right):
+        # Append the smaller element between left[i] and right[j] to the result
         if left[i] < right[j]:
             result.append(left[i])
             i += 1
@@ -18,6 +19,7 @@ def merge(left: list[int], right: list[int]) -> list[int]:
             result.append(right[j])
             j += 1
 
+    # Append any remaining elements in left and right to the result
     result.extend(left[i:])
     result.extend(right[j:])
     return result

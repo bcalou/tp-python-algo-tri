@@ -1,5 +1,5 @@
 import time
-from typing import Callable, List
+from typing import Callable
 
 from sort import selection, insertion, fusion
 from sort.range import generate_array_of_number
@@ -24,6 +24,7 @@ def main() -> None:
     algorithms: list[Callable[[list[int]], list[int]]] = [selection.sort, insertion.sort, fusion.sort, sorted]
     algorithms_names: list[str] = ["Selection", "Insertion", "Fusion", "Python's sorted"]
 
+    # Loop to measure and print the time taken by each sorting algorithm for different array sizes
     for algorithm, name in zip(algorithms, algorithms_names):
         print(f"\nTime measurements for {name} sort:")
         for size in sizes:
