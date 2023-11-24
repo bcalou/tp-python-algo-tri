@@ -26,6 +26,7 @@ def merge(array: list[int], array2: list[int]) -> list[int]:
 
     while len(sorted_array) != len(array) + len(array2):
 
+        # Avoid list out of range
         if array_index >= len(array):
 
             sorted_array.append(array2[array2_index])
@@ -35,6 +36,8 @@ def merge(array: list[int], array2: list[int]) -> list[int]:
 
             sorted_array.append(array[array_index])
             array_index += 1
+
+        # or check wich value is the smallest
 
         elif array2[array2_index] < array[array_index]:
 
