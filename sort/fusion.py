@@ -54,13 +54,11 @@ def fuse_2_array(array1: list[int], array2: list[int]) -> list[int]:
         # Si l'un ou l'autre des curseurs a atteinds la fin de son tableau
         # alors on insère les données de l'autre tableau
         if index1 >= size1 and index2 < size2:
-            sorted_array.append(array2[index2])
-            index2 += 1
-            continue
+            sorted_array += array2[index2:]
+            break
         elif index2 >= size2 and index1 < size1:
-            sorted_array.append(array1[index1])
-            index1 += 1
-            continue
+            sorted_array += array1[index1:]
+            break
 
         # Sinon comportement classique, on insère le plus petit des deux
         # nombres en premier
