@@ -23,6 +23,13 @@ def fusion_sort(array: list[int]) -> list[int]:
     first_half: list[int] = fusion_sort(array[:size//2])
     second_half: list[int] = fusion_sort(array[size//2:])
 
+    # Le premier tableau peut être vide
+    # exemple:
+    # array = [1]
+    # size = 1   =>   size//2 = 0
+    # first_half  = [1][:0] = []
+    # second_half = [1][0:] = [1]
+
     # On fusionne nos deux tableaux
     return fuse_2_array(first_half, second_half)
 
@@ -30,10 +37,10 @@ def fusion_sort(array: list[int]) -> list[int]:
 def fuse_2_array(array1: list[int], array2: list[int]) -> list[int]:
     """Fuse 2 arrays into 1, the result array is sorted"""
 
-    # Le deuxième tableau peut être vide si le tableau original
-    # a une taille impaire
-    if array2 == []:
-        return array1
+    # Le premier tableau peut être vide apres le passage dans fusion sort
+    # Voir commentaires dans fusion_sort
+    if array1 == []:
+        return array2
 
     # On a un curseur dans chacun des tableaux
     index1: int = 0
