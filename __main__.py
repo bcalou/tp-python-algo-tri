@@ -48,7 +48,7 @@ def draw_graph(sizes: list[int], times: list[float], title: str):
 def main():
     """Main function."""
 
-    #sort.range.execution_time_for_array_of_numbers()
+    sort.range.execution_time_for_array_of_numbers()
 
     sizes: list[int] = []
     times: list[float] = []
