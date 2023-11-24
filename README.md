@@ -223,6 +223,9 @@ Une dernière fois, analysez le temps d'exécution et découvrez si python fait 
 
 La fonction sort de python est largement plus rapide, en moyenne 100x plus rapide
 
+<img src="img/graph_python_sort.PNG">
+
+
 ## Pour rendre ce TP
 
 Merci de faire une Pull Request vers ce repository.
