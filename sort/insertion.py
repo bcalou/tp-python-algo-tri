@@ -3,10 +3,12 @@ def sort(array: list[int]) -> list[int]:
     placing the lowest value to the left"""
 
     for index, value in enumerate(array):
+
+        # Can't compare a value with nothing before
+        if index == 0:
+            continue
+
         for i in range(1, len(array[:index])+1):
-            # Can't compare a value with nothing before
-            if index == 0:
-                break
             if value < array[index-i]:
                 array[index-i], array[index-i+1] = value, array[index-i]
             else:
