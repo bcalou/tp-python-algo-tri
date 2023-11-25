@@ -17,22 +17,31 @@ def sort(array: list[int]) -> list[int]:
     return merge(sort(array[:len(array) // 2]), sort(array[len(array) // 2:]))
 
 
-def merge(array_gauche: list[int], array_droite: list[int]) -> list[int]:
+def merge(array_left: list[int], array_right: list[int]) -> list[int]:
+    """We can erge two array together by forming a new array"""
     """merge take two array and create one new array we both of them,
     at every loop it takes the smallest number between two arrays
     and remove from the array. Then we return new array created"""
     new_array: list[int] = []
+
+    # We loop until the new array have all left and right values
     while (True):
-        if (array_gauche == []):
-            new_array += array_droite
-            return new_array
-        elif (array_droite == []):
-            new_array += array_gauche
-            return new_array
-        if array_droite[0] < array_gauche[0]:
-            new_array.append(array_droite.pop(0))
+
+        # if left or right list is empty then we can had the other
+        # at our new array and return it because it is sorted
+        if (array_left == []):
+            return new_array + array_right
+        elif (array_right == []):
+            return new_array + array_left
+
+        # if we suppose that the right and the left list is sorted then for
+        # have a new sort we just need to compare the first element of each
+        # list. We don't forget to add it at the new array and remove it
+        # because we add this value
+        if array_right[0] < array_left[0]:
+            new_array.append(array_right.pop(0))
         else:
-            new_array.append(array_gauche.pop(0))
+            new_array.append(array_left.pop(0))
 
 
 """

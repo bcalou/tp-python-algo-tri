@@ -6,19 +6,29 @@ Ensuite, il recommence avec le reste de la liste tant qu'elle n'est pas vide.
 
 
 def sort(array: list[int]) -> list[int]:
-    """We make two loop. if an element is smaller than "index_min_number",
-      we change "index_min_number" we permut first element with element
-      at this index. We do it again for second element of the list
-      until end of the list """
+    """We sort a list of int by select the minimum number
+    each time for build the list"""
 
+    # The first loop can permit us to search the minimum of the list then
+    # we sort it and we search again the minimum until we reach end of list
     for increment in range(len(array)):
-        index_min_number: int = increment
-        for implementation in range(increment, len(array)):
-            if array[index_min_number] > array[implementation]:
-                index_min_number = implementation
-        temp: int = array[increment]
-        array[increment] = array[index_min_number]
-        array[index_min_number] = temp
+
+        # We define the minimum at the increment index
+        index_min: int = increment
+
+        # The second loop check all number between the index "increment" and
+        # the end of the list. Number before increment index are already sorted
+        for number in range(increment, len(array)):
+
+            # We modify index of the minimum if we find a number smaller.
+            # Each turn we search the minimum of rest of the list
+            # that we weren't sort
+            if array[index_min] > array[number]:
+                index_min = number
+
+        # We permut the minimum we find with the increment who represent
+        # the begin of the list we already search
+        array[increment], array[index_min] = array[index_min], array[increment]
     return array
 
 
