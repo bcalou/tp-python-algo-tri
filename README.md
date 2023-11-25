@@ -89,6 +89,8 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
+<img src="img/selectionGraph.png">
+
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? O(n²). Cela semble logique car pour chaque entrée supplémentaire, à chaque itération (il y en a n * n-index soit presque n²) on explore une valeur de plus. Soit n² fois plus de valeurs.
 
 ### 2. Tri par insertion
@@ -110,6 +112,8 @@ Mesurez le temps d'éxécution pour un tableau de :
 - 10000 entrées
 
 Tracez le graphique correspondant.
+
+<img src="img/insertionGraph.png">
 
 Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? O(n²). En effet, pour chaque élément dans le tableau, dans le pire des cas on itère entre le début du tableau et l'index de ce nombre. Cela représente presque n² itérations pour explorer tous les éléments.
 
@@ -177,15 +181,18 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+<img src="img/fusionGraph.png">
 
-Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? O(n log n). Cet algorithme utilise la récursivité plutôt que des boucles imbriquées. Pour chaque élement supplémentaire, on va réaliser une récursion de plus, mais pas explorer de nouveau tout le tableau. C'est donc une complexité logique.
+
+Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? Des tailles je ne sais pas, mais si le tableau fourni est déjà trié, il est plus lent que les autres.
 
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
 Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+Il est effectivement beaucoup plus rapide !
 
 ## Pour rendre ce TP
 

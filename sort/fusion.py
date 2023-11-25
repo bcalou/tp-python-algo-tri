@@ -1,33 +1,33 @@
-def merge(array_A: list[int], array_B: list[int]) -> list[int]:
-    """sort and merge two given array"""
-
-    merged_array: list[int] = []
-
-    while len(array_A) != 0 or len(array_B) != 0:
-
-        if len(array_A) == 0:
-            merged_array.extend(array_B)
-            break
-
-        if len(array_B) == 0:
-            merged_array.extend(array_A)
-            break
-
-        if array_A[0] < array_B[0]:
-            merged_array.append(array_A[0])
-            array_A.pop(0)
-        else:
-            merged_array.append(array_B[0])
-            array_B.pop(0)
-
-    return merged_array
-
-
 def sort(array: list[int]) -> list[int]:
-    """split the array until every element is separated"""
+    """sort using fusion:
+    split the given list until every element is separated,
+    then compare them to merge them into a sorted list"""
 
     if len(array) > 1:
         array = merge(sort(array[:len(array)//2]),
                       sort(array[len(array)//2:]))
 
     return array
+
+
+def merge(array_a: list[int], array_b: list[int]) -> list[int]:
+    """sort and merge two ordered given lists"""
+
+    merged_array: list[int] = []
+
+    while len(array_a) != 0 or len(array_b) != 0:
+
+        if len(array_a) == 0:
+            merged_array.extend(array_b)
+            break
+
+        if len(array_b) == 0:
+            merged_array.extend(array_a)
+            break
+
+        if array_a[0] < array_b[0]:
+            merged_array.append(array_a.pop(0))
+        else:
+            merged_array.append(array_b.pop(0))
+
+    return merged_array
