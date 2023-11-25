@@ -109,7 +109,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? Ici la complexié est difficile à distinguer, on pourrait imaginer un complexité O(log n) mais cela n'est pas logique par rapport au code implémenté nous aurions dû trouver une complexité semblable à O(n²).
 
 ### 3. Tri par fusion
 

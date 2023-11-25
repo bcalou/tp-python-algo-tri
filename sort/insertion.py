@@ -31,29 +31,3 @@ def time_to_sort_insertion(length: int):
     end: float = time.time()
     print("Taille du tableau = " , length)
     print("Temps écoulé : ", end - start )
-    
-time_to_sort_insertion(1000)
-time_to_sort_insertion(2000)
-time_to_sort_insertion(3000)
-time_to_sort_insertion(4000)
-time_to_sort_insertion(5000)
-time_to_sort_insertion(6000)
-time_to_sort_insertion(7000)
-time_to_sort_insertion(8000)
-time_to_sort_insertion(9000)
-time_to_sort_insertion(10000)
-
-
-# array1 = [1, 3, 1, 4, 3, 4]
-# array2 = [73, 16, 829, 2, 6]
-# array3 = [-4, -282, 0, 7, 0]
-# array4 = [1, 1, 1, 1, 1]
-# array5 = []
-# array6 = [8]
-
-# sort(array1)
-# sort(array2)
-# sort(array3)
-# sort(array4)
-# sort(array5)
-# sort(array6)
