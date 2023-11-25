@@ -2,20 +2,26 @@ import time
 import random
 
 def generate_array_of_number(array_size: int) -> list[int]:
-    start: float = time.time()
+    """Génère une array de taille donnée en paramètre"""
     array = [random.randint(0, 100) for i in range(array_size)]
-    end: float = time.time()
-    print("Taille du tableau = " , array_size)
-    print("Temps écoulé : ", end - start )
-    return []
+    return array
 
-generate_array_of_number(1000000)
-generate_array_of_number(2000000)
-generate_array_of_number(3000000)
-generate_array_of_number(4000000)
-generate_array_of_number(5000000)
-generate_array_of_number(6000000)
-generate_array_of_number(7000000)
-generate_array_of_number(8000000)
-generate_array_of_number(9000000)
-generate_array_of_number(10000000)
+def time_to_generate_array(length: int):
+    """temps pour générer une array de taille passée en paramètre"""
+    start: float = time.time()
+    generate_array_of_number(length)
+    end: float = time.time()
+    print("Taille du tableau = " , length)
+    print("Temps écoulé : ", end - start )
+    
+
+# time_to_generate_array(1000000)
+# time_to_generate_array(2000000)
+# time_to_generate_array(3000000)
+# time_to_generate_array(4000000)
+# time_to_generate_array(5000000)
+# time_to_generate_array(6000000)
+# time_to_generate_array(7000000)
+# time_to_generate_array(8000000)
+# time_to_generate_array(9000000)
+# time_to_generate_array(10000000)

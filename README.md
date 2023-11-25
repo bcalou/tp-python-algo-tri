@@ -57,7 +57,7 @@ Mesurez combien de temps prend python à générer un tableau composés de :
 
 Sur un tableur, générez un tableau permettant de visualiser le temps d'éxécution en fonction de la taille de l'entrée.
 
-Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? Malgré une précision assez mauvaise distingue une courbe semblante à O(n log n)
+Comment vous semble évoluer la courbe ? Observez bien les différentes courbes du graphique ci-dessous. Quelle est la plus ressemblante à notre situation ? Malgré une précision assez mauvaise distingue une courbe semblante à O(n)
 
 <img src="img/o.webp" width="400">
 
@@ -75,7 +75,7 @@ Observez attentivement l'animation de tri par sélection ci-dessous pour en comp
 
 <img src="img/selection.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? Nous avons une variable à laquelle nous affectons la première valeur non triée de la liste, puis nous commençons à parcourir la liste, lorsque nous croisons une valeur plus petite que celle stockée dans notre variable nous l'affectons à notre variable jusqu'à arriver au bout de la liste, dès que nous y sommes arrivés nous plaçons l'élément à la suite des éléments triés, et ainsi de suite 
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/selection.py`. Vérifiez son bon fonctionnement en éxécutant le fichier `python3 -m unittest`. Le test correspondant au tri par sélection doit passer.
 
