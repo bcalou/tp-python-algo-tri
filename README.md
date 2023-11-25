@@ -88,7 +88,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? La complexité semble être O(n2²), cela semble logique par rapport au code implémenté, nous avons 2 boucles imbriquées.
 
 ### 2. Tri par insertion
 
@@ -96,7 +96,7 @@ Observez attentivement l'animation de tri par insertion ci-dessous pour en compr
 
 <img src="img/insertion.gif">
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? L'algorithme de tri par insertion prend chaque élément de la liste un par un et les replaces dans le liste en les comparant à la partie déjà trié. Il ne bouge pas le premier élément car il n'y a pas encore de partie triée, puis il séléctionne le deuxième et le trie par rapport au premier, pour fait de même avec le troisième etc....
 
 Puis implémentez l'algorithme en python dans la fonction `sort` du fichier `sort/insertion.py`. Utilisez les tests automatiques pour vérifier votre implémentation.
 

@@ -1,13 +1,3 @@
-import sys
-import os
-
-# Chemin vers le répertoire racine du projet
-project_path = 'C:\\Users\\HP\\Documents\\GitHub\\tp-python-algo-tri'
-
-
-# Ajouter le chemin au PYTHONPATH
-sys.path.append(project_path)
-
 import time
 from sort.range import generate_array_of_number
 
