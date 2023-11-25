@@ -109,7 +109,7 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? Ici la complexié est difficile à distinguer, on pourrait imaginer un complexité O(log n) mais cela n'est pas logique par rapport au code implémenté nous aurions dû trouver une complexité semblable à O(n²).
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? De la même manière que pour le tri par selection nous avons un programme qui imbrique 2 boucles, nous devrions donc retrouver un complexité de 0( n² ) et c'est bel et bien ce que le grahique nous retransmet 
 
 ### 3. Tri par fusion
 
@@ -154,7 +154,7 @@ Observez bien le schéma suivant : il représente le concept du tri par fusion.
 
 Cet algorithme est de type "diviser pour régner".
 
-Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? *Écrivez votre réponse ici*
+Écrivez en français classique ce que vous voyez. Quel est le fonctionnement ? Comment l'expliqueriez-vous à quelqu'un ? Nous divisons un tableau en 2 puis nous divisons ces 2 nouveaux tableaux en 4 et ce jusqu'à obtenir des tableaux de taille 1, après tout avoir divisé nous devons les réassembler mais cette fois ci dans le bon ordre, chaque membre s'assemble avec son membre de gauche ou droite pour former un tableau trié et ainsi de suite jusqu'à revenir à seul tableau mais cette fois ci, trié  
 
 Complétez la fonction `sort` du fichier `sort/fusion.py` en suivant les instructions suivantes.
 
@@ -174,15 +174,17 @@ Mesurez le temps d'éxécution pour un tableau de :
 
 Tracez le graphique correspondant.
 
-Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? *Écrivez votre réponse ici*
+Quelle semble être la complexité de notre fonction de tri ? Cela est-il logique par rapport au code que vous avez implémenté ? La complexité semble être O ( n log n ), nous avons un algorithme de division récursive donc cela paraît logique
 
-Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? *Écrivez votre réponse ici*
+Question bonus : Y a-t-il des tailles de tableaux pour lesquelles le tri par fusion n'est pas aussi rapide que les précédents tris abordés ? Les tailles de tableau très petite sont défavorables pour le tri fusion 
 
 ### 4. sort()
 
 Bien que tout cela soit fascinant, Python possède sa propre méthode de tri : `sort()`.
 
-Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;)
+Une dernière fois, analysez le temps d'exécution et découvrez si python fait mieux que nos implémentations rudimentaires ;) 
+
+Nos algos sont bien moins rapide que le sort de python 
 
 ## Pour rendre ce TP
 
