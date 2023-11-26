@@ -62,5 +62,4 @@ def main():
             print(f"Array size: {array_size} - Time: {time_metric}")
 
 
-
 main()

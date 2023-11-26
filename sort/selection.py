@@ -1,15 +1,25 @@
-def sort(array: list[int]) -> list[int]:
+def sort(input_list: list[int]) -> list[int]:
     """
-    selection sort algorithm
+    Selection sort algorithm
 
-    :param array:
-    :return: sorted array
+    :param input_list: The list to be sorted.
+    :return: The sorted list.
     """
-    for i in range(len(array)):
-        min_index = i
-        for j in range(i + 1, len(array)):
-            if array[min_index] > array[j]:
-                min_index = j
+    # Iterate over the entire list
+    for current_index in range(len(input_list)):
+        # Assume the current index is the index of the smallest element
+        min_index = current_index
 
-        array[i], array[min_index] = array[min_index], array[i]
-    return array
+        # Iterate over the rest of the list
+        for comparison_index in range(current_index + 1, len(input_list)):
+            # If a smaller element is found, update min_index
+            if input_list[min_index] > input_list[comparison_index]:
+                min_index = comparison_index
+
+        # Swap the current element with the smallest element found in
+        # the unsorted part of the list
+        input_list[current_index], input_list[min_index] = input_list[
+            min_index], input_list[current_index]
+
+    # Return the sorted list
+    return input_list
