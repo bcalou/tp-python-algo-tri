@@ -1,31 +1,35 @@
 def sort(array: list[int]) -> list[int]:
     """Tri par algorithme de fusion"""
     if len(array) <= 1:
-        print(array)
         return array
-    else:
-        print(array)
-        array1: list[int] = array[0 : len(array) // 2]
-        sort(array1)
-        array2: list[int] = array[len(array) // 2: len(array)]
-        sort(array2)
-        return merge(array1, array2)
+
+    if len(array) <= 10:
+        # Utiliser un tri plus simple pour de petites listes
+        return sorted(array)
+
+    mid = len(array) // 2
+    left = sort(array[:mid])
+    right = sort(array[mid:])
+    return merge(left, right)
 
 
 def merge(array1: list[int], array2: list[int]) -> list[int]:
     """Donne 1 liste triée à partir de 2 listes triées"""
     array: list[int] = []
 
-    while len(array1) > 1 or len(array2) > 1:
-        print("merging arrays", array1, array2)
-        if array1[0] < array2[0]:
-            array.append(array1[0])
-            array1.pop(0)
+    # Indices pour les deux listes
+    i = j = 0
+
+    while i < len(array1) and j < len(array2):
+        if array1[i] < array2[j]:
+            array.append(array1[i])
+            i += 1
         else:
-            array.append(array2[0])
-            array2.pop(0)
+            array.append(array2[j])
+            j += 1
 
-    return array + array1 + array2
+    # Ajouter les éléments restants de array1 et array2
+    array.extend(array1[i:])
+    array.extend(array2[j:])
 
-merge([1, 2, 5], [3, 4, 6])
-#print(sort([1, 2, 5, 6, 3, 4, 7, 8, 9]))
+    return array

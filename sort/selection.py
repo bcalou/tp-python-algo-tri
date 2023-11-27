@@ -9,10 +9,11 @@ def sort(array: list[int]) -> list[int]:
             if array[j] < array[min_index]:
                 min_index = j
 
-        # échanger les valeurs seulement si nécessaire
+        # Echanger les valeurs si nécessaire
         if min_index != index:
             array[index], array[min_index] = array[min_index], array[index]
 
     return array
+
 
 print(sort([1, 2, 3, 4, 6, 9, 5, 7, 9, 1, 2, 0]))

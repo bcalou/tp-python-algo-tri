@@ -7,8 +7,4 @@ def sort(array: list[int]) -> list[int]:
         while j >= 0 and array[j] > value:
             array[j + 1], array[j] = array[j], value
             j -= 1
-
     return array
-
-
-print(sort([1, 2, 3, 4, 6, 9, 5, 7, 9, 1, 2, 0]))
